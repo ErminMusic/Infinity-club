@@ -1,14 +1,39 @@
-import Image from "next/image"
 import tw from "tailwind-styled-components"
-import Headerlogo from "../../public/images/Logo1.png"
 
 function Header() {
+
+    const NavbarItems = [
+        {
+            title: "HOME",
+        },
+        {
+            title: "ABOUT",
+        },
+        {
+            title: "LOCATION",
+        },
+        {
+            title: "MENU",
+        }
+    ]
+
   return (
     <Container>
 
-        <Image src={Headerlogo} className="h-40" />
+        <Logo>
 
-        <Navbar>Home</Navbar>
+            <img src='https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FInfinity%20Logo%202.png?alt=media&token=ed69617c-9719-4b50-8cc2-9363bc387b41' 
+            className="h-2/3" alt="/" />
+
+        </Logo>
+
+        <Navbar>
+
+            {NavbarItems.map((item, index) => (
+                <NavbarItem key={index} style={{color: "#afafaf"}} >{item.title}</NavbarItem>
+            ))}
+            
+        </Navbar>
 
     </Container>
   )
@@ -17,15 +42,24 @@ function Header() {
 export default Header
 
 const Container = tw.div`
-    h-50
-    w-4/5
-    border-4 border-sky-500
+    h-1/7 
+    flex content-center
 `
 
-const Logo = tw.img`
-
+const Logo = tw.div`
+    w-1/2
+    flex items-center
 `
+
 
 const Navbar = tw.div`
+    w-1/2
+    flex justify-evenly content-center
+    h-full
+    cursor-pointer
+`
 
+const NavbarItem = tw.div`
+    my-auto
+    text-xl
 `
