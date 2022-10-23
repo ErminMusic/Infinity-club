@@ -78,7 +78,7 @@ function Menu() {
     const images = [
         {
             link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector.png?alt=media&token=13148449-9767-428f-9451-0e7a8078a2f2",
-            name: "Champaigns"    
+            name: "Champaign"    
         },
         {
             link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector%20(1).png?alt=media&token=45268cac-c9d0-4564-bf25-1d97614a318b",
@@ -99,9 +99,9 @@ function Menu() {
     ]
 
   return (
-    <Container className="z-10">
+    <Container className="z-10 font-raleway">
 
-        <img className="w-1/3" src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FOUR%20MENU.png?alt=media&token=1757651d-655d-41be-818a-f83e3b6d3c77" />
+        <img className="w-1/3 2sm:w-1/2" src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FOUR%20MENU.png?alt=media&token=1757651d-655d-41be-818a-f83e3b6d3c77" />
 
         <Type>
 
@@ -109,9 +109,9 @@ function Menu() {
 
                 <MenuBlock key={index}>
 
-                    <img  src={item.link} />
+                    <img className="h-2/3 2sm:h-1/2" src={item.link} />
 
-                    <p className=" md:text-sm" >{item.name}</p>
+                    <p className=" md:text-sm sm:text-xsm 2sm:text-xxsm" >{item.name}</p>
 
                 </MenuBlock>
 
@@ -129,9 +129,9 @@ function Menu() {
 
                     <List key={index}>
 
-                        <p>{item.name}</p>
+                        <p >{item.name}</p>
 
-                        <span>{item.price} €</span>
+                        <span >{item.price} €</span>
 
                     </List>
 
@@ -187,6 +187,7 @@ export default Menu
 const Container = tw.div`
     p-14
     w-full
+    m:p-3
 `
 
 const Type = tw.div`
@@ -194,15 +195,25 @@ const Type = tw.div`
     w-full
     justify-evenly
     my-10
+    md:p-14
+    md:-my-2
+    sm:-my-5
 `
 
 const MenuBlock = tw.div`
-    hover:bg-amber-400 transition-all
+    hover:bg-cus-yellow transition-all
     w-full
     md:min-w-[27%]
+    mm:min-w-[29%]
+    sm:min-w-[32%]
+    /sm:min-w-[35%]
+    2sm:min-w-[40%]
+    /2sm:min-w-[42%]
+    3sm:min-w-[47%]
     p-4
     md:p-0
-    md:py-2
+    md:py-4
+    mm:px:0
     bg-zinc-900
     flex content-center items-center justify-center  flex-col
 `
@@ -231,11 +242,13 @@ const ItemName = tw.div`
 const Title = tw.div`
     text-white
     mb-4
+    sm:text-sm
 `
 
 const List = tw.div`
     py-1
     flex
+    2sm:text-xsm
     text-neutral-200
     justify-between
 `

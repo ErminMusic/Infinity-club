@@ -4,15 +4,15 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 
 function About() {
   return (
-    <Container className="z-10">
+    <Container className="z-10 font-raleway">
 
         <Icons>
 
             <p>Follow us on</p>
 
-            <FacebookIcon />
+            <FacebookIcon className=" cursor-pointer" />
 
-            <InstagramIcon />
+            <InstagramIcon className=" cursor-pointer" />
 
         </Icons>
 
@@ -21,12 +21,12 @@ function About() {
 
             <AboutDiv>
 
-                <div className=" w-full" >
-                    <img className=" pl-10 pb-10 w-2/4 md:pl-0 md:" src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2Fabout%20infinity.png?alt=media&token=7bdb17b0-13ae-4466-85ed-306e8974c10a" />
+                <div className=" w-full " >
+                    <img className=" pl-10 pb-10 w-2/4 m:pl-0 m:w-1/3 " src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2Fabout%20infinity.png?alt=media&token=7bdb17b0-13ae-4466-85ed-306e8974c10a" />
 
                 </div>
 
-                <p className="text-justify pl-10 pr-20 m:px-0 lg:pr-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id faucibus faucibus mi tortor massa in vestibulum duis lacus. Pellentesque ultrices integer porta augue purus faucibus mus. Diam et volutpat
+                <p className="text-justify pl-10 pr-14 m:px-0 lg:pr-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id faucibus faucibus mi tortor massa in vestibulum duis lacus. Pellentesque ultrices integer porta augue purus faucibus mus. Diam et volutpat
                 etiam faucibus neque, aliquet hendrerit. Elementum eget enim lorem turpis consectetur fringilla. Sodales egestas luctus posuere commodo sit mattis etiam dignissim.
                 Maecenas iaculis arcu praesent est. Vulputate.</p>
                 
@@ -42,7 +42,7 @@ function About() {
                     <img className="w-full m:mt-5" src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2Fedouard-percevault-ubpo1fZg154-unsplash%201.png?alt=media&token=a8b2f280-7abb-4df2-8e35-7d06f75b8db6" />
 
 
-                    <p className="text-justify pt-10 m:pt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id faucibus faucibus mi tortor massa in vestibulum duis lacus. Pellentesque ultrices integer porta augue purus faucibus mus. Diam et volutpat
+                    <p className="text-justify pt-10 m:pt-1 pr-14 lg:pr-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id faucibus faucibus mi tortor massa in vestibulum duis lacus. Pellentesque ultrices integer porta augue purus faucibus mus. Diam et volutpat
                     etiam faucibus neque, aliquet hendrerit. Elementum eget enim lorem turpis consectetur fringilla. Sodales egestas luctus posuere commodo sit mattis etiam dignissim.
                     Maecenas iaculis arcu praesent est. Vulputate.</p>
                 </div>
@@ -62,7 +62,7 @@ function About() {
 export default About
 
 const Container = tw.div`
-    text-yellow-300
+    text-cus-yellow
     
 `
 
@@ -70,7 +70,7 @@ const Icons = tw.div`
     mb-28
     p-14
     md:mb-16
-    md:pl-3
+    m:pl-3
 `
 
 const Info = tw.div`
@@ -84,4 +84,6 @@ const AboutDiv = tw.div`
     m:w-full
     m:flex flex-col justify-center items-center
     p-4
+    mm:text-sm
+    2sm:text-xsm
 `

@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lexend+Deca:wght@300&family=Raleway&display=swap');
 html,
 body {
   padding: 0;
@@ -9,6 +11,67 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(40, 40, 40, 0) 0%, rgba(40, 40, 40, 0.481031) 2.15%, #202020 7.51%);
+}
+
+
+.image {
+  position: absolute;
+  height: 28%;
+  right: 0 ;
+  left: 0;
+  z-index: 5;
+  background-image: linear-gradient(180deg, #1D1D1D 10.96%, rgba(0, 0, 0, 0) 30%),url("https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2Famir-toossi-w9WO8txR7Uk-unsplash%201.png?alt=media&token=174282bb-62f5-404b-9a77-a4e1d0c4f3a2");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ 
+
+@media (max-width:900px) {
+  .image {
+    height: 22%;
+  }
+  .background {
+    height: 86%;
+  }
+}
+
+@media (max-width:700px) {
+  .image {
+    height: 16%;
+  }
+  .background {
+    height: 93%;
+  }
+}
+
+@media (max-width:450px) {
+  .image {
+    height: 13%;
+  }
+  .background {
+    height: 95%;
+  }
+}
+
+@media (max-width:300px) {
+  .image {
+    height: 10%;
+  }
+  .background {
+    height: 98%;
+  }
 }
 
 * {

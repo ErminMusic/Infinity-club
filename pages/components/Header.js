@@ -1,4 +1,5 @@
 import tw from "tailwind-styled-components"
+import MenuIcon from '@material-ui/icons/Menu';
 
 function Header() {
 
@@ -18,7 +19,7 @@ function Header() {
     ]
 
   return (
-    <Container className="z-10">
+    <Container className="z-10 font-raleway">
 
         <Logo>
 
@@ -32,6 +33,8 @@ function Header() {
             {NavbarItems.map((item, index) => (
                 <NavbarItem key={index} style={{color: "#afafaf"}} >{item.title}</NavbarItem>
             ))}
+
+
             
         </Navbar>
 
