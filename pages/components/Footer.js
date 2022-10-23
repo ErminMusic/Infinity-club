@@ -2,19 +2,22 @@ import tw from "tailwind-styled-components"
 
 function Footer() {
   return (
-    <Container className="font-raleway">
+    <Container >
 
         <Info>
 
-            <img className=" w-1/5 -ml-2 lg:w-1/4 m:w-1/3 mm:w-1/2 sm:w-1/2" src='https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FInfinity%20Logo%202.png?alt=media&token=ed69617c-9719-4b50-8cc2-9363bc387b41' />
+            <img className=" w-1/5 -ml-2 lg:w-1/4 m:w-1/3 mm:w-1/2 sm:w-1/2" 
+            src='https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FInfinity%20Logo%202.png?alt=media&token=ed69617c-9719-4b50-8cc2-9363bc387b41' />
 
             <div className=" flex justify-between w-2/3 my-1 m:flex-col gap-5">
 
                 <div>
 
-                    <p className=" text-white mb-2 m:text-center /sm:text-xs sm:text-sm 2sm:text-xsm">The best clubbing experience <br/> in Graz</p>
+                    <p className=" text-white mb-2 m:text-center /sm:text-xs sm:text-sm 2sm:text-xsm">
+                        The best clubbing experience <br/> in Graz</p>
 
-                    <p className="text-cus-yellow underline cursor-pointer m:text-center 2sm:text-smm sm:text-sm">infinity@email.com</p>
+                    <p className="text-cus-yellow underline cursor-pointer m:text-center 2sm:text-smm sm:text-sm">
+                        infinity@email.com</p>
 
                 </div>
 
@@ -68,6 +71,7 @@ const Container = tw.div`
     sm:p-4
     flex flex-col 
     m:items-center
+    font-raleway
     w-full
     h-full
 `

@@ -41,7 +41,8 @@ function Location() {
   return (
     <Container className="font-raleway" >
         
-        <img className="w-1/4 lg:w-1/3 m:w-1/3" src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FFIND%20US.png?alt=media&token=e98838c1-db5c-40db-8eea-b0b972df2a7a" />
+        <img className="w-1/4 lg:w-1/3 m:w-1/3" 
+        src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FFIND%20US.png?alt=media&token=e98838c1-db5c-40db-8eea-b0b972df2a7a" />
 
         <p className=" text-white py-5">In the heart of the Graz</p>
 
@@ -87,7 +88,10 @@ function Location() {
                     <h2>LOCATION</h2>
 
                     <div>
-                        <LocationOnIcon /> <span className=" 2sm:text-smm sm:text-sm text-white">Alte Poststraße 460-462 8055 Graz</span>
+                        <LocationOnIcon /> 
+                        <span className=" 2sm:text-smm sm:text-sm text-white">
+                            Alte Poststraße 460-462 8055 Graz
+                        </span>
                     </div>
 
                 </div>
@@ -96,7 +100,8 @@ function Location() {
 
             <LocationMap>
                 
-                <img className="w-10/12 lg:w-full" src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FRectangle%204053.png?alt=media&token=642c6802-84eb-44e6-b2be-2fcffb4929f3" />
+                <img className="w-10/12 lg:w-full" 
+                src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FRectangle%204053.png?alt=media&token=642c6802-84eb-44e6-b2be-2fcffb4929f3" />
 
             </LocationMap>
 

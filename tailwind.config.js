@@ -31,6 +31,7 @@ module.exports = {
 
       'md': {'max': '750px'},
       // => @media (max-width: 767px) { ... }
+      'mmd': {'max': '700px'},
 
       'smd': {'max': '650px'},
 
@@ -52,6 +53,10 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
 
       'minmd': {'min': '750px'},
+
+      'minmmd': {'min': '700px'},
+
+      'minsm': {'min': '450px'},
     },
 
     maxWidth: {
@@ -67,6 +72,7 @@ module.exports = {
     extend: {
       colors: {
         'cus-yellow': '#EAD185',
+        'cus-gray': '#282828'
       },
       fontSize: {
         xxsm: '9px',

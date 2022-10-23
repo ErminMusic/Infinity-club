@@ -10,14 +10,11 @@ export default function Home() {
   return (
     <Container className="relative overflow-hidden">
 
-      <div  className="image absolute right-0 left-0  z-5 "  
-      />
+      <div  className="image absolute right-0 left-0  z-5 "  />
 
-      <div className="background absolute  " src="" /> 
-      
-
+      <div className="background absolute "  /> 
      
-      <Wrap className=" z-10">
+      <Wrap >
 
         <Header />
         
@@ -52,4 +49,5 @@ const Wrap = tw.div`
   flex-col
   items-center
   md:w-full
+  z-10
 `

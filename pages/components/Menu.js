@@ -99,9 +99,10 @@ function Menu() {
     ]
 
   return (
-    <Container className="z-10 font-raleway">
+    <Container>
 
-        <img className="w-1/3 2sm:w-1/2" src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FOUR%20MENU.png?alt=media&token=1757651d-655d-41be-818a-f83e3b6d3c77" />
+        <img className="w-1/3 2sm:w-1/2" 
+        src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FOUR%20MENU.png?alt=media&token=1757651d-655d-41be-818a-f83e3b6d3c77" />
 
         <Type>
 
@@ -188,6 +189,7 @@ const Container = tw.div`
     p-14
     w-full
     m:p-3
+    z-10 font-raleway
 `
 
 const Type = tw.div`
