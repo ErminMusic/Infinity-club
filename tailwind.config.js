@@ -52,9 +52,11 @@ module.exports = {
       '4sm': {'max': '200px'},
       // => @media (max-width: 639px) { ... }
 
+      'minm': {'min': '901px'},
+
       'minmd': {'min': '750px'},
 
-      'minmmd': {'min': '700px'},
+      'minmmd': {'min': '701px'},
 
       'minsm': {'min': '450px'},
     },

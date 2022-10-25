@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal"
 import tw from "tailwind-styled-components"
 
 function Menu() {
@@ -77,23 +78,28 @@ function Menu() {
 
     const images = [
         {
-            link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector.png?alt=media&token=13148449-9767-428f-9451-0e7a8078a2f2",
+            link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FChamp.png?alt=media&token=a8a18117-d1d9-4b59-887e-41cc66c3de49",
+            linkblack: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector.png?alt=media&token=13148449-9767-428f-9451-0e7a8078a2f2",
             name: "Champaign"    
         },
         {
-            link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector%20(1).png?alt=media&token=45268cac-c9d0-4564-bf25-1d97614a318b",
+            link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FWine.png?alt=media&token=8a5ec17e-855d-4503-80ad-1e45f176e3a3",
+            linkblack: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector%20(1).png?alt=media&token=45268cac-c9d0-4564-bf25-1d97614a318b",
             name: "Wine"
         },
         {
-            link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector%20(2).png?alt=media&token=193c5c2c-3a14-4668-a0ad-1a1223344938",
+            link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FCoctail.png?alt=media&token=5c466db1-4d03-42a0-95c3-243f56613119",
+            linkblack: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector%20(2).png?alt=media&token=193c5c2c-3a14-4668-a0ad-1a1223344938",
             name: "Coctails"
         },
         {
-            link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector%20(3).png?alt=media&token=e08161a7-4762-4f80-8ff5-fe6375de916b",
-            name: "Coctails"
+            link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FNon%20Alch.png?alt=media&token=45e58785-0c07-4ea2-8be9-fb815c99153a",
+            linkblack: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector%20(3).png?alt=media&token=e08161a7-4762-4f80-8ff5-fe6375de916b",
+            name: "Non-alcoholic"
         },
         {
-            link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector%20(4).png?alt=media&token=d98c84a7-b7a5-4b9e-be98-86538680eee1",
+            link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FFood.png?alt=media&token=896a9c62-9975-49d6-a84e-a90584218602",
+            linkblack: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector%20(4).png?alt=media&token=d98c84a7-b7a5-4b9e-be98-86538680eee1",
             name: "Food"
         },
     ]
@@ -104,79 +110,87 @@ function Menu() {
         <img className="w-1/3 2sm:w-1/2" 
         src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FOUR%20MENU.png?alt=media&token=1757651d-655d-41be-818a-f83e3b6d3c77" />
 
-        <Type>
+        <Fade triggerOnce={true} >
 
-            {images.map((item, index) => (
+            <Type className=" overflow-x-auto  ">
 
-                <MenuBlock key={index}>
+                {images.map((item, index) => (
 
-                    <img className="h-2/3 2sm:h-1/2" src={item.link} />
+                    <MenuBlock className="hover:text-black " key={index}>
 
-                    <p className=" md:text-sm sm:text-xsm 2sm:text-xxsm" >{item.name}</p>
+                        <img src={item.link} />
 
-                </MenuBlock>
+                        <p className="text-center mt-1 text-cus-yellow " >{item.name}</p>
 
-            ))}
-
-        </Type>
-
-        <Items>
-                
-            <MenuList>
-
-                <Title>Heißgetränke</Title>
-
-                {Heißgetränke.map((item, index) => (
-
-                    <List key={index}>
-
-                        <p >{item.name}</p>
-
-                        <span >{item.price} €</span>
-
-                    </List>
+                    </MenuBlock>
 
                 ))}
 
-            </MenuList>
+            </Type>
 
-            <MenuList>
+        </Fade>
 
-            <Title>BioLimonaden</Title>
+        
+        <Fade triggerOnce={true} >
+            <Items>
+                    
+                <MenuList>
 
-                {BioLimonaden.map((item, index) => (
+                    <Title>Heißgetränke</Title>
 
-                    <List key={index}>
+                    {Heißgetränke.map((item, index) => (
 
-                        <p>{item.name}</p>
+                        <List key={index}>
 
-                        <span>{item.price} €</span>
+                            <p >{item.name}</p>
 
-                    </List>
+                            <span >{item.price} €</span>
 
-                ))}
+                        </List>
 
-            </MenuList>
+                    ))}
 
-            <MenuList>
+                </MenuList>
 
-            <Title>Soda, Mineral</Title>
+                <MenuList>
 
-                {Soda.map((item, index) => (
+                <Title>BioLimonaden</Title>
 
-                    <List key={index}>
+                    {BioLimonaden.map((item, index) => (
 
-                        <p>{item.name}</p>
+                        <List key={index}>
 
-                        <span>{item.price} €</span>
+                            <p>{item.name}</p>
 
-                    </List>
+                            <span>{item.price} €</span>
 
-                ))}
+                        </List>
 
-            </MenuList>
+                    ))}
 
-        </Items>
+                </MenuList>
+
+                <MenuList>
+
+                <Title>Soda, Mineral</Title>
+
+                    {Soda.map((item, index) => (
+
+                        <List key={index}>
+
+                            <p>{item.name}</p>
+
+                            <span>{item.price} €</span>
+
+                        </List>
+
+                    ))}
+
+                </MenuList>
+
+            </Items>
+        </Fade>
+        
 
 
     </Container>
@@ -189,35 +203,28 @@ const Container = tw.div`
     p-14
     w-full
     m:p-3
-    z-10 font-raleway
+    font-raleway
+    -z-50
 `
 
 const Type = tw.div`
     flex
     w-full
-    justify-evenly
     my-10
-    md:p-14
-    md:-my-2
-    sm:-my-5
 `
-
+    // hover:bg-cus-yellow 
 const MenuBlock = tw.div`
-    hover:bg-cus-yellow transition-all
+
+    transition-all
     w-full
-    md:min-w-[27%]
-    mm:min-w-[29%]
-    sm:min-w-[32%]
-    /sm:min-w-[35%]
-    2sm:min-w-[40%]
-    /2sm:min-w-[42%]
-    3sm:min-w-[47%]
+    font-bold
+    min-w-[130px]
     p-4
     md:p-0
     md:py-4
-    mm:px:0
+    mm:px-0
     bg-zinc-900
-    flex content-center items-center justify-center  flex-col
+    flex items-center  justify-center flex-col
 `
 
 const Items = tw.div`

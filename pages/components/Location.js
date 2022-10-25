@@ -1,5 +1,6 @@
 import tw from "tailwind-styled-components"
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+import { Fade } from "react-awesome-reveal";
 
 function Location() {
 
@@ -39,73 +40,81 @@ function Location() {
     ]
 
   return (
-    <Container className="font-raleway" >
+    <Container className="font-raleway " >
         
-        <img className="w-1/4 lg:w-1/3 m:w-1/3" 
-        src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FFIND%20US.png?alt=media&token=e98838c1-db5c-40db-8eea-b0b972df2a7a" />
+        <Fade triggerOnce={true} >
 
-        <p className=" text-white py-5">In the heart of the Graz</p>
+            <img className="w-1/4 lg:w-1/3 m:w-1/3" 
+            src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FFIND%20US.png?alt=media&token=e98838c1-db5c-40db-8eea-b0b972df2a7a" />
+
+            <p className=" text-white py-5">In the heart of the Graz</p>
+
+        </Fade>
+
 
         <Wrap>
 
             <Time>
 
-                <div className=" m-auto text-cus-yellow my-4 flex content-center items-center m:text-center ">
-                    <p>WORKING HOURS</p>
-                </div>
-                
+                <Fade triggerOnce={true} >
 
-                <Week className=" 2sm:text-xs">
-
-                    {Workday.map((item, index) => (
-
-                        <Days key={index}>
-
-                            <Day>{item.day}</Day>
-
-                            <WorkTime>{item.time}</WorkTime>
-
-                        </Days>
-
-                    ))}
-                    
-                    {Weekday.map((item, index) => (
-
-                        <DaysYellow key={index}>
-
-                            <Day className=" text-black" >{item.day}</Day>
-
-                            <WorkTime className=" text-black">{item.time}</WorkTime>
-
-                        </DaysYellow>
-
-                    ))}
-                    
-                </Week>
-
-                <div className=" m-auto text-cus-yellow my-4 flex flex-col content-center items-center">
-
-                    <h2>LOCATION</h2>
-
-                    <div>
-                        <LocationOnIcon /> 
-                        <span className=" 2sm:text-smm sm:text-sm text-white">
-                            Alte Poststraße 460-462 8055 Graz
-                        </span>
+                    <div className=" m-auto text-cus-yellow my-4 flex content-center items-center m:text-center ">
+                        <p>WORKING HOURS</p>
                     </div>
+                    
 
-                </div>
+                    <Week className=" 2sm:text-xs">
 
+                        {Workday.map((item, index) => (
+
+                            <Days key={index}>
+
+                                <Day>{item.day}</Day>
+
+                                <WorkTime>{item.time}</WorkTime>
+
+                            </Days>
+
+                        ))}
+                        
+                        {Weekday.map((item, index) => (
+
+                            <DaysYellow key={index}>
+
+                                <Day className=" text-black" >{item.day}</Day>
+
+                                <WorkTime className=" text-black">{item.time}</WorkTime>
+
+                            </DaysYellow>
+
+                        ))}
+                        
+                    </Week>
+
+                    <div className=" m-auto text-cus-yellow my-4 flex flex-col content-center items-center">
+
+                        <h2>LOCATION</h2>
+
+                        <div>
+                            <LocationOnIcon /> 
+                            <span className=" 2sm:text-smm sm:text-sm text-white">
+                                Alte Poststraße 460-462 8055 Graz
+                            </span>
+                        </div>
+
+                    </div>
+                </Fade>
             </Time>
 
-            <LocationMap>
-                
-                <img className="w-10/12 lg:w-full" 
-                src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FRectangle%204053.png?alt=media&token=642c6802-84eb-44e6-b2be-2fcffb4929f3" />
+            <Fade className="w-2/3 md:w-full md:h-full" triggerOnce={true} >
 
-            </LocationMap>
+                <LocationMap>
 
+                    <Map className=" aspect-auto md:aspect-square h-full" src="https://maps.google.com/maps?q=west%20palm%20beach&t=&z=15&ie=UTF8&iwloc=&output=embed" ></Map>
+                    
+                </LocationMap>
 
+            </Fade>
         </Wrap>
 
     </Container>
@@ -117,17 +126,23 @@ export default Location
 const Container = tw.div`
     p-14
     flex flex-col
+    h-full
     w-full
     sm:p-3
     lg:pt-8
     m:p-3
+    -z-50
+`
+
+const Map = tw.iframe`
+    w-10/12 lg:w-full
 `
 
 const Wrap = tw.div`
     flex
     bg-zinc-700
-    m:flex-col
-
+    md:flex-col
+    h-full
 `
 
 const Time = tw.div`
@@ -135,7 +150,8 @@ const Time = tw.div`
     ml-10
     p-2
     w-1/3
-    lg:w-full
+    lg:w-2/3
+    md:w-full
     lg:ml-0
 `
 
@@ -169,7 +185,7 @@ const Day = tw.div`
 
 const LocationMap = tw.div`
     flex justify-end
-    p-2
-    w-2/3
-    lg:w-full
+    p-2 mr-5
+    w-full
+    h-full
 `

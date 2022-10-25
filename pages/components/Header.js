@@ -68,10 +68,11 @@ export default Header
 const Container = tw.div`
     h-1/7 
     w-full
-    flex content-center
-    z-10 font-raleway
+    flex content-center 
+    z-100 font-raleway
     m:px-3
     relative
+    fixed
 `
 
 const Logo = tw.div`
@@ -82,14 +83,15 @@ const Logo = tw.div`
 
 const Navbar = tw.div`
     w-1/2
-    flex justify-evenly items-center
+    mt-11
+    flex justify-evenly items-center content-center
     h-full
     mmd:hidden
 `
 
 const Menu = tw.div`
-    w-1/2
-    p-4
+    w-1/2 
+    py-4
     flex justify-end items-center
     h-full
     minmmd:hidden

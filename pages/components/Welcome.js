@@ -1,9 +1,11 @@
 import tw from "tailwind-styled-components"
-
+import { Fade } from "react-awesome-reveal"
 
 function Welcome() {
   return (
     <Container className="">
+
+      <Fade triggerOnce={true} >
 
       <div className=" flex flex-col justify-center items-center w-full">
 
@@ -23,16 +25,22 @@ function Welcome() {
 
         </div>
               
-        <p style={{color: "#E5E5E5"}} className='my-4 mb-24 md:mb-12 sm:mb-6 text-center 2sm:text-xsm 2sm:px-8 mm:px-6 mm:text-sm' 
+        <p style={{color: "#E5E5E5"}} className='my-4 mb-24 md:mb-12 sm:mb-6 text-center ' 
         >Welcome to the best clubbing expirience in Graz</p>
 
       </div>
+
+      </Fade>
       
       <ButtonHolder >
 
-        <ButtonLight >Find Us</ButtonLight>
+        <Fade triggerOnce={true} >
+          <ButtonLight >Find Us</ButtonLight>
+        </Fade>
 
-        <ButtonDark >Our Menu</ButtonDark>
+        <Fade triggerOnce={true} >
+          <ButtonDark >Our Menu</ButtonDark>
+        </Fade>
 
       </ButtonHolder>
 
@@ -57,6 +65,9 @@ const Container = tw.div`
 const ButtonLight = tw.div`
   border border-cus-yellow
   text-cus-yellow
+  hover:bg-cus-yellow/60
+  transition-all
+  hover:text-black
   py-2 px-10
   w-36
   flex flex-col justify-center items-center
@@ -64,7 +75,7 @@ const ButtonLight = tw.div`
   cursor-pointer
   sm:my-2
   md:mt-2
-  2xl:text- xl:text- lg:text-xs
+  2xl:text- xl:text- lg:text-xs 
   whitespace-nowrap	
 `
 
