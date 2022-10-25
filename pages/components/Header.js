@@ -27,19 +27,26 @@ function Header() {
     ]
 
     const changeColor = () => {
-        if(window.scrollY <= 90) {
+        if(window.scrollY >= 90) {
             setBgColor(true)
         } else {
             setBgColor(false)
         }
     }
 
-    useEffect(() => {
+    // window.addEventListener('scroll', changeColor)
+
+    if (typeof window !== "undefined") {
+        // Client-side-only code
         addEventListener('scroll', changeColor)
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeColor)
     },[])
 
   return (
-    <Container className={bgColor ? "header" : "headerbg" } >
+    <Container className={bgColor ? "headerbg" : "header" } >
 
         <Logo>
 
