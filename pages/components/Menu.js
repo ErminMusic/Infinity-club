@@ -1,6 +1,7 @@
 import { Fade } from "react-awesome-reveal"
 import tw from "tailwind-styled-components"
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWineBottle, faWineGlass, faMartiniGlass, faGlassWater, faBowlFood } from '@fortawesome/free-solid-svg-icons'
 function Menu() {
 
     const Heißgetränke = [
@@ -76,51 +77,54 @@ function Menu() {
         },
     ]
 
+
     const images = [
         {
-            link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FChamp.png?alt=media&token=a8a18117-d1d9-4b59-887e-41cc66c3de49",
-            linkblack: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector.png?alt=media&token=13148449-9767-428f-9451-0e7a8078a2f2",
+            image: <FontAwesomeIcon className=" text-3xl" icon={faWineBottle} />,
             name: "Champaign"    
         },
         {
-            link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FWine.png?alt=media&token=8a5ec17e-855d-4503-80ad-1e45f176e3a3",
-            linkblack: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector%20(1).png?alt=media&token=45268cac-c9d0-4564-bf25-1d97614a318b",
+            image: <FontAwesomeIcon className=" text-3xl" icon={faWineGlass} />,
             name: "Wine"
         },
         {
-            link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FCoctail.png?alt=media&token=5c466db1-4d03-42a0-95c3-243f56613119",
-            linkblack: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector%20(2).png?alt=media&token=193c5c2c-3a14-4668-a0ad-1a1223344938",
+            image: <FontAwesomeIcon className=" text-3xl" icon={faMartiniGlass} />,
             name: "Coctails"
         },
         {
-            link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FNon%20Alch.png?alt=media&token=45e58785-0c07-4ea2-8be9-fb815c99153a",
-            linkblack: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector%20(3).png?alt=media&token=e08161a7-4762-4f80-8ff5-fe6375de916b",
+            image: <FontAwesomeIcon className=" text-3xl" icon={faGlassWater} />,
             name: "Non-alcoholic"
         },
         {
-            link: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FFood.png?alt=media&token=896a9c62-9975-49d6-a84e-a90584218602",
-            linkblack: "https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FVector%20(4).png?alt=media&token=d98c84a7-b7a5-4b9e-be98-86538680eee1",
+            image: <FontAwesomeIcon className=" text-3xl" icon={faBowlFood} />,
             name: "Food"
         },
     ]
 
+ 
   return (
     <Container>
 
         <img className="w-1/3 2sm:w-1/2" 
         src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FOUR%20MENU.png?alt=media&token=1757651d-655d-41be-818a-f83e3b6d3c77" />
 
+<FontAwesomeIcon icon="fa-solid fa-wine-bottle" />
+
         <Fade triggerOnce={true} >
+
+        
 
             <Type className=" overflow-x-auto  ">
 
                 {images.map((item, index) => (
 
-                    <MenuBlock className="hover:text-black " key={index}>
+                    <MenuBlock tabindex="1" 
+                    className="text-center text-cus-yellow
+                    hover:text-black hover:bg-cus-yellow/50 focus:text-black focus:bg-cus-yellow " key={index}>
+                        
+                        {item.image}
 
-                        <img src={item.link} />
-
-                        <p className="text-center mt-1 text-cus-yellow " >{item.name}</p>
+                        {item.name}
 
                     </MenuBlock>
 
@@ -212,9 +216,9 @@ const Type = tw.div`
     w-full
     my-10
 `
-    // hover:bg-cus-yellow 
-const MenuBlock = tw.div`
 
+const MenuBlock = tw.div`
+    hover:bg-cus-yellow 
     transition-all
     w-full
     font-bold

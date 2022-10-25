@@ -61,4 +61,8 @@ const Wrap = tw.div`
 const Arrow = tw(ExpandLessIcon)`
   rounded-full text-cus-yellow
   border-2 border-cus-yellow
+  hover:bg-cus-yellow/50 
+  transition-all 
+  hover:animate-bounce
+  z-100
 `

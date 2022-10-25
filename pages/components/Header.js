@@ -2,10 +2,13 @@ import tw from "tailwind-styled-components"
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import { useState } from "react";
+import styled from "styled-components";
 
 function Header() {
 
     const [ showMenu, setShowMenu ] = useState(false)
+
+   const [ bgColor, setBgColor ] = useState(false)
 
     const NavbarItems = [
         {
@@ -22,8 +25,18 @@ function Header() {
         }
     ]
 
+    const changeColor = () => {
+        if(window.scrollY <= 90) {
+            setBgColor(true)
+        } else {
+            setBgColor(false)
+        }
+    }
+
+    window.addEventListener('scroll', changeColor)
+
   return (
-    <Container >
+    <Container className={bgColor ? "header" : "headerbg" } >
 
         <Logo>
 
@@ -35,7 +48,14 @@ function Header() {
         <Navbar>
 
             {NavbarItems.map((item, index) => (
-                <NavbarItem key={index} style={{color: "#afafaf"}} >{item.title}</NavbarItem>
+                <NavbarItem  key={index} style={{color: "#afafaf"}} >
+                    
+                    <Item>
+                        <span>{item.title}</span>
+                    </Item>
+                    
+
+                </NavbarItem>
             ))}
             
         </Navbar>
@@ -46,7 +66,6 @@ function Header() {
                 <MenuIcon style={{fontSize: 28,display: showMenu ? `none` : `initial`}}  className=" text-cus-yellow cursor-pointer" />
             </div>
            
-
         </Menu>
 
         <MenuList style={{ transform: showMenu ? `translateX(0)`: `translateX(100%)` }} >
@@ -87,6 +106,39 @@ const Navbar = tw.div`
     flex justify-evenly items-center content-center
     h-full
     mmd:hidden
+`
+
+const Item = styled.div`
+    text-transform: uppercase;
+    position: relative;
+
+    span {
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            background: white;
+            height: 2px;
+            left: 0px;
+            right: 0;
+            bottom: -6px;
+            opacity: 0;
+            transform: left center ;
+            transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: scaleX(0);
+            }
+        }
+
+    &:hover {
+        span:after {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+    }
+    
 `
 
 const Menu = tw.div`

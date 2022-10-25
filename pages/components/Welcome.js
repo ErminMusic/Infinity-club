@@ -56,10 +56,11 @@ const Container = tw.div`
   mt-1/2 px-16 pt-32 pb-40
   h-auto w-full
   flex flex-col justify-center items-center font-raleway
-  md:pt-16
+  md:pt-22
   md:pb-12
-  sm:pt-5
+  sm:pt-16
   /sm:px-0
+  -z-50
 `
 
 const ButtonLight = tw.div`
