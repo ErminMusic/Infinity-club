@@ -3,6 +3,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import { useState } from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
 
 function Header() {
 
@@ -33,7 +34,9 @@ function Header() {
         }
     }
 
-    window.addEventListener('scroll', changeColor)
+    useEffect(() => {
+        addEventListener('scroll', changeColor)
+    },[])
 
   return (
     <Container className={bgColor ? "header" : "headerbg" } >
