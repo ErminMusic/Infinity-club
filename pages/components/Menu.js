@@ -77,7 +77,6 @@ function Menu() {
         },
     ]
 
-
     const images = [
         {
             image: <FontAwesomeIcon className=" text-3xl" icon={faWineBottle} />,
@@ -100,7 +99,6 @@ function Menu() {
             name: "Food"
         },
     ]
-
 
   return (
     <Container>
