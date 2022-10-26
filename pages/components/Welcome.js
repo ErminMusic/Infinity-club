@@ -10,7 +10,7 @@ function Welcome() {
       <div className=" flex flex-col justify-center items-center w-full">
 
         <img src='https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FInfinity%20Logo%202.png?alt=media&token=ed69617c-9719-4b50-8cc2-9363bc387b41' 
-          className="w-1/4 lg:w-1/3 m:w-2/5 smd:w-2/5 mm:w-1/2 md:w-1/3 2sm:w-2/3 2sm:px-8 mm:px-6" alt="/" />
+          className="w-1/4 lg:w-1/3 m:w-2/5 smd:w-2/5 mm:w-1/2 sm:w-2/3 md:w-1/3 2sm:w-2/3 2sm:px-8 mm:px-6" alt="/" />
 
 
         <div className=" w-full flex my-5 items-center mm:justify-items-start justify-center md:flex-col font-cin
@@ -33,6 +33,9 @@ function Welcome() {
       </Fade>
       
       <ButtonHolder >
+
+      {/* <video loop={true} autoPlay={true} className=" right-0 left-0 top-0 w-full z-100" src="https://player.vimeo.com/video/681571070?h=c8ce8eb88a&title=0&byline=0&portrait=0&muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963" /> */}
+
 
         <Fade triggerOnce={true} >
           <ButtonLight >Find Us</ButtonLight>
@@ -60,6 +63,7 @@ const Container = tw.div`
   md:pb-12
   sm:pt-16
   /sm:px-0
+  sm:pt-24
   -z-50
 `
 

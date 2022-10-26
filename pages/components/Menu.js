@@ -106,11 +106,8 @@ function Menu() {
         <img className="w-1/3 2sm:w-1/2" 
         src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FOUR%20MENU.png?alt=media&token=1757651d-655d-41be-818a-f83e3b6d3c77" />
 
-<FontAwesomeIcon icon="fa-solid fa-wine-bottle" />
 
         <Fade triggerOnce={true} >
-
-        
 
             <Type className=" overflow-x-auto  ">
 
@@ -118,7 +115,8 @@ function Menu() {
 
                     <MenuBlock tabindex="1" 
                     className="text-center text-cus-yellow
-                    hover:text-black hover:bg-cus-yellow/50 focus:text-black focus:bg-cus-yellow " key={index}>
+                    hover:text-black hover:bg-cus-yellow/50 focus:text-black focus:bg-cus-yellow cursor-pointer"
+                    key={index}>
                         
                         {item.image}
 
@@ -212,7 +210,7 @@ const Container = tw.div`
 const Type = tw.div`
     flex
     w-full
-    my-10
+    my-6
 `
 
 const MenuBlock = tw.div`

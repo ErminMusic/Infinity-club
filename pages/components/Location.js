@@ -44,7 +44,7 @@ function Location() {
         
         <Fade triggerOnce={true} >
 
-            <img className="w-1/4 lg:w-1/3 m:w-1/3" 
+            <img className="w-1/3 2sm:w-1/2" 
             src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FFIND%20US.png?alt=media&token=e98838c1-db5c-40db-8eea-b0b972df2a7a" />
 
             <p className=" text-white py-5">In the heart of the Graz</p>
@@ -58,8 +58,8 @@ function Location() {
 
                 <Fade triggerOnce={true} >
 
-                    <div className=" m-auto text-cus-yellow my-4 flex content-center items-center m:text-center ">
-                        <p>WORKING HOURS</p>
+                    <div className=" m-auto text-cus-yellow my-4 w-full flex content-center items-center ">
+                        <p className="text-center w-full text-lg ">WORKING HOURS</p>
                     </div>
                     
 
@@ -93,7 +93,7 @@ function Location() {
 
                     <div className=" m-auto text-cus-yellow my-4 flex flex-col content-center items-center">
 
-                        <h2>LOCATION</h2>
+                        <h2 className="text-lg" >LOCATION</h2>
 
                         <div>
                             <LocationOnIcon /> 

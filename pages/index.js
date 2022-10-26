@@ -7,9 +7,17 @@ import Menu from "./components/Menu"
 import Welcome from "./components/Welcome"
 import BackToTop from "react-back-to-top-button"
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import ReactPlayer from "react-player"
+import dynamic from "next/dynamic"
 
 export default function Home() {
+
+  const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+
+  const link = "https://player.vimeo.com/video/681571070?h=c8ce8eb88a&title=0&byline=0&portrait=0&muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963"
+
   return (
+
     <Container className="relative overflow-hidden">
 
       <div  className="image absolute right-0 left-0  z-5 "  />

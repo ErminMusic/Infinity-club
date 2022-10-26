@@ -50,7 +50,7 @@ function Header() {
 
         <Logo>
 
-            <img className="2xl:h-2/3 lg:h-1/2"
+            <img className="2xl:h-2/3 lg:h-1/2 cursor-pointer"
             src='https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FInfinity%20Logo%202.png?alt=media&token=ed69617c-9719-4b50-8cc2-9363bc387b41'  />
 
         </Logo>
@@ -73,17 +73,21 @@ function Header() {
         <Menu  >
             
             <div onClick={() => setShowMenu(true)}>
-                <MenuIcon style={{fontSize: 28,display: showMenu ? `none` : `initial`}}  className=" text-cus-yellow cursor-pointer" />
+                <MenuIcon style={{fontSize: 28, display: showMenu ? `none` : `initial`}}  className=" text-cus-yellow cursor-pointer" />
             </div>
            
         </Menu>
 
-        <MenuList style={{ transform: showMenu ? `translateX(0)`: `translateX(100%)` }} >
+        <MenuList style={{ transform: showMenu ? `translateY(0)`: `translateY(-120%)` }} >
 
             <CloseIcon onClick={() => setShowMenu(false)} style={{fontSize: 28}}  className=" text-cus-yellow cursor-pointer" />
 
             {NavbarItems.map((item, index) => (
-                <NavbarItem key={index} style={{color: "#afafaf"}} >{item.title}</NavbarItem>
+                <NavbarItem key={index} style={{color: "#afafaf"}} >
+                    <Item>
+                        <span>{item.title}</span>
+                    </Item>
+                </NavbarItem>
             ))}
 
         </MenuList>
@@ -153,16 +157,17 @@ const Item = styled.div`
 
 const Menu = tw.div`
     w-1/2 
-    py-4
-    flex justify-end items-center
+    py-10
+    flex justify-end items-center 
     h-full
     minmmd:hidden
 `
 
 const MenuList = tw.div`
-    absolute top-0 right-0
-    bg-transparent
-    w-1/4
+    absolute top-3 right-3 left-3
+    bg-cus-gray
+    rounded
+    w-auto
     py-4
     flex flex-col gap-3  justify-center items-center
     minmmd:hidden
@@ -175,6 +180,7 @@ const NavbarItem = tw.div`
     sm:flex justify-center 
     px-1
     smd:px-0
+    mmd:py-1
     text-xl
     z-100
     cursor-pointer
