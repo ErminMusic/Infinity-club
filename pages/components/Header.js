@@ -2,8 +2,9 @@ import tw from "tailwind-styled-components"
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import { useState } from "react";
-import styled from "styled-components";
 import { useEffect } from "react";
+import LogoImg from "../../public/images/Logo1.png"
+import Image from "next/image";
 
 function Header() {
 
@@ -50,8 +51,12 @@ function Header() {
 
         <Logo>
 
-            <img className="2xl:h-2/3 lg:h-1/2 cursor-pointer"
-            src='https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FInfinity%20Logo%202.png?alt=media&token=ed69617c-9719-4b50-8cc2-9363bc387b41'  />
+            <div className="h-full w-1/3 max85:w-1/2 max70:h-4/5 max75:py-1.5 max70:py-0 max65:h-2/3 
+            max50:h-1/2 max45:w-2/3 max30:w-4/5  max30:h-70% max25:w-full cursor-pointer relative" > 
+
+                <Image src={LogoImg} layout="responsive" alt="/" />
+
+            </div>
 
         </Logo>
 
@@ -61,9 +66,10 @@ function Header() {
                 <NavbarItem  key={index} style={{color: "#afafaf"}} >
                     
                     <Item>
-                        <span>{item.title}</span>
+
+                        <UnderLine >{item.title}</UnderLine>
+
                     </Item>
-                    
 
                 </NavbarItem>
             ))}
@@ -80,13 +86,17 @@ function Header() {
 
         <MenuList style={{ transform: showMenu ? `translateY(0)`: `translateY(-120%)` }} >
 
-            <CloseIcon onClick={() => setShowMenu(false)} style={{fontSize: 28}}  className=" text-cus-yellow cursor-pointer" />
+            <CloseIcon onClick={() => setShowMenu(false)} style={{fontSize: 28, marginRight: 28}}  className=" text-cus-yellow cursor-pointer" />
 
             {NavbarItems.map((item, index) => (
                 <NavbarItem key={index} style={{color: "#afafaf"}} >
+
                     <Item>
-                        <span>{item.title}</span>
+
+                        <UnderLine >{item.title}</UnderLine>
+                        
                     </Item>
+
                 </NavbarItem>
             ))}
 
@@ -99,68 +109,58 @@ function Header() {
 export default Header
 
 const Container = tw.div`
-    h-1/7 
+    max-h-[20%]
     w-full
     flex content-center 
     z-100 font-raleway
-    m:px-3
+    max90:px-3
     relative
     fixed
+    shadow-md
 `
 
 const Logo = tw.div`
-    w-1/2
-    flex items-center
+    w-1/2 m-auto
+    flex items-center 
 `
 
 
 const Navbar = tw.div`
     w-1/2
-    mt-11
+    my-10
+    max95:my-8
+    max75:my-5
     flex justify-evenly items-center content-center
     h-full
-    mmd:hidden
+    max70:hidden
 `
 
-const Item = styled.div`
-    text-transform: uppercase;
-    position: relative;
+const Item = tw.div`
+    uppercase
+    relative
+    max70:mr-8
+`
 
-    span {
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        position: relative;
+const UnderLine = tw.div`
+    relative 
+    uppercase tracking-wide
+    hover:after:opacity-100 
+    hover:after:scale-100
 
-        &::after {
-            position: absolute;
-            content: "";
-            background: white;
-            height: 2px;
-            left: 0px;
-            right: 0;
-            bottom: -6px;
-            opacity: 0;
-            transform: left center ;
-            transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            transform: scaleX(0);
-            }
-        }
-
-    &:hover {
-        span:after {
-            opacity: 1;
-            transform: scaleX(1);
-        }
-    }
-    
+    after:absolute after:content-['']
+    after:bg-cus-yellow after:h-0.5 
+    after:right-0 after:left-0 after:-bottom-0.5 
+    after:opacity-0 after:transform 
+    after:scale-x-0 after:transition-all 
+    after:duration-300
 `
 
 const Menu = tw.div`
     w-1/2 
-    py-10
+    py-7
     flex justify-end items-center 
     h-full
-    minmmd:hidden
+    min70:hidden
 `
 
 const MenuList = tw.div`
@@ -169,20 +169,21 @@ const MenuList = tw.div`
     rounded
     w-auto
     py-4
-    flex flex-col gap-3  justify-center items-center
-    minmmd:hidden
+    flex flex-col gap-3 justify-center items-end 
+    min70:hidden
     transition-all
     z-20
 `
 
 const NavbarItem = tw.div`
     my-auto
-    sm:flex justify-center 
+    min70:h-full
+    flex justify-start justify-content-start items-start
     px-1
-    smd:px-0
-    mmd:py-1
+    max65:px-0
+    max70:py-1
     text-xl
     z-100
     cursor-pointer
-    lg:text-xxs  2sm:text-smm mm:text-xs
+    max110:text-xxs  max30:text-smm max50:text-xs
 `

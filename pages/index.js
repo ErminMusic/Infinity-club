@@ -22,7 +22,7 @@ export default function Home() {
 
       <div  className="image absolute right-0 left-0  z-5 "  />
 
-      <div className="background absolute "  /> 
+      <div className="background absolute "  />
      
       <Wrap >
 
@@ -38,8 +38,11 @@ export default function Home() {
 
         <Footer />
 
-        <BackToTop showAt={10} easing="easeInOutQuint" className=" transition-all right-4 bottom-4" >
-          <Arrow style={{fontSize: 40}} />
+        <BackToTop showAt={10} easing="easeInOutQuint" 
+        className="w-auto relative h-auto transition-all right-4 bottom-4" >
+
+          <Arrow style={{fontSize: 35}} />
+
         </BackToTop>
 
       </Wrap>
@@ -62,7 +65,7 @@ const Wrap = tw.div`
   flex
   flex-col
   items-center
-  md:w-full
+  max75:w-full
   z-10
 `
 
@@ -71,6 +74,7 @@ const Arrow = tw(ExpandLessIcon)`
   border-2 border-cus-yellow
   hover:bg-cus-yellow/50 
   transition-all 
-  hover:animate-bounce
+  anime
+  duration-500
   z-100
 `

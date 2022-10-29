@@ -1,21 +1,26 @@
 import tw from "tailwind-styled-components"
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import { Fade } from "react-awesome-reveal"
+import { Fade } from "react-reveal"
+import Image from "next/image";
+import AboutImg from "../../public/images/About.png"
+import Bar1 from "../../public/images/Bar1.png"
+import Bar2 from "../../public/images/Bar2.png"
+
 
 function About() {
   return (
     <Container className="">
 
-        <Fade triggerOnce={true} >
+        <Fade  triggerOnce={true} >
         
             <Icons>
 
-                <p>Follow us on</p>
+                <p>Follow us on</p> 
 
-                <FacebookIcon className=" cursor-pointer" />
+                <FacebookIcon className=" hover:animate-bounce cursor-pointer" />
 
-                <InstagramIcon className=" cursor-pointer" />
+                <InstagramIcon className=" hover:animate-bounce cursor-pointer" />
 
             </Icons>
 
@@ -26,42 +31,68 @@ function About() {
             <Info>
                 
 
-                <AboutDiv>
+                <AboutDiv className="" > 
 
-                    <div className=" w-full " >
+                    <Fade>
 
-                        <img className=" pl-10 pb-10 w-1/2 2sm:w-1/2 m:pl-0 " 
-                        src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2Fabout%20infinity.png?alt=media&token=7bdb17b0-13ae-4466-85ed-306e8974c10a" />
+                        <div className="ml-10 w-45% h-10%
+                        max90:pl-0 max90:h-20% max90:w-35% max90:ml-0 max90:right-32.5% max55:w-45% max55:right-28%
+                        flex flex-col relative max30:w-1/2 max30:right-25%  " >
+                        
+                        <Image src={AboutImg} alt="" layout="intrinsic" />
 
-                    </div>
+                        </div>
 
-                    <p className="text-justify pl-10 pr-14 m:px-0 lg:pr-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id faucibus faucibus mi tortor massa in vestibulum duis lacus. Pellentesque ultrices integer porta augue purus faucibus mus. Diam et volutpat
-                    etiam faucibus neque, aliquet hendrerit. Elementum eget enim lorem turpis consectetur fringilla. Sodales egestas luctus posuere commodo sit mattis etiam dignissim.
-                    Maecenas iaculis arcu praesent est. Vulputate.</p>
-                    
-                    <img className=" pl-10 pt-24 w-full m:px-0 m:pt-5 lg:pt-8" 
-                    src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2Ftabreez-LN4J1tbUXnM-unsplash%201.png?alt=media&token=ff1748c5-f5ef-4d47-80df-57e459001522" />
+                    </Fade>
+                   
+                    <Fade>
 
+                        <p className="text-justify pt-5 pl-10 pr-14 max90:px-0 max110:pr-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id faucibus faucibus mi tortor massa in vestibulum duis lacus. Pellentesque ultrices integer porta augue purus faucibus mus. Diam et volutpat
+                        etiam faucibus neque, aliquet hendrerit. Elementum eget enim lorem turpis consectetur fringilla. Sodales egestas luctus posuere commodo sit mattis etiam dignissim.
+                        Maecenas iaculis arcu praesent est. Vulputate.</p>
+
+                    </Fade>
+
+                    <Fade>
+
+                        <div className="pl-10 w-100% h-60% relative mt-5 max90:mx-0 max90:px-0 max90:mt-5 max110:mt-8">
+
+                            <Image src={Bar2} alt="" layout="fill" />
+
+                        </div>
+
+                    </Fade>
 
                 </AboutDiv>
 
                 <AboutDiv>
 
-                    <div className=" m:flex m:flex-col-reverse">
+                    <div className=" max90:flex max90:flex-col-reverse">
+                        
+                        <Fade>
 
-                        <img className="w-full m:mt-5" 
-                        src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2Fedouard-percevault-ubpo1fZg154-unsplash%201.png?alt=media&token=a8b2f280-7abb-4df2-8e35-7d06f75b8db6" />
+                            <div className=" w-100% h-60% relative max90:mx-0 max90:px-0 max90:mt-5">
 
+                                <Image src={Bar1} alt="" layout="responsive" />
 
-                        <p className="text-justify pt-10 m:pt-1 pr-14 lg:pr-4 m:pr-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id faucibus faucibus mi tortor massa in vestibulum duis lacus. Pellentesque ultrices integer porta augue purus faucibus mus. Diam et volutpat
-                        etiam faucibus neque, aliquet hendrerit. Elementum eget enim lorem turpis consectetur fringilla. Sodales egestas luctus posuere commodo sit mattis etiam dignissim.
-                        Maecenas iaculis arcu praesent est. Vulputate.</p>
+                            </div>
+
+                        </Fade>
+
+                        <Fade>
+
+                            <p className="text-justify pt-10 max90:pt-1 pr-14 max110:pr-4 max90:pr-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id faucibus faucibus mi tortor massa in vestibulum duis lacus. Pellentesque ultrices integer porta augue purus faucibus mus. Diam et volutpat
+                            etiam faucibus neque, aliquet hendrerit. Elementum eget enim lorem turpis consectetur fringilla. Sodales egestas luctus posuere commodo sit mattis etiam dignissim.
+                            Maecenas iaculis arcu praesent est. Vulputate.</p>
+
+                        </Fade>
 
                     </div>
 
                 </AboutDiv>
 
             </Info>
+
         </Fade>
 
     </Container>
@@ -74,28 +105,30 @@ const Container = tw.div`
     text-cus-yellow 
     font-raleway
     -z-50
+    w-full h-100%
 `
 
 const Icons = tw.div`
     mb-28
     p-14
-    md:mb-16
-    m:pl-3
+    max75:mb-16
+    max90:pl-3
+    
 `
 
 const Info = tw.div`
     flex
     justify-between
-    m:flex-col
+    max90:flex-col
     
 `
 
 const AboutDiv = tw.div`
     w-1/2 h-auto
-    m:w-full
-    m:flex flex-col justify-center items-center
+    max90:w-full
+    max90:flex flex-col justify-center items-center
     p-3
     
-    mm:text-sm
-    2sm:text-xsm
+    max50:text-sm
+    max30:text-xsm
 `

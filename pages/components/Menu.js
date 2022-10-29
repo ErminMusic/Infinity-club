@@ -1,7 +1,10 @@
-import { Fade } from "react-awesome-reveal"
+import { Fade } from "react-reveal"
 import tw from "tailwind-styled-components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWineBottle, faWineGlass, faMartiniGlass, faGlassWater, faBowlFood } from '@fortawesome/free-solid-svg-icons'
+import Image from "next/image";
+import MenuImg from "../../public/images/Menu.png"
+
 function Menu() {
 
     const Heißgetränke = [
@@ -101,97 +104,107 @@ function Menu() {
     ]
 
   return (
-    <Container>
+    <Container >
 
-        <img className="w-1/3 2sm:w-1/2" 
-        src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FOUR%20MENU.png?alt=media&token=1757651d-655d-41be-818a-f83e3b6d3c77" />
+        <Fade triggerOnce={true}>
 
+            <div className="w-1/3 max45:w-1/2">
 
-        <Fade triggerOnce={true} >
+                <Image src={MenuImg} alt="" layout="responsive" />
 
-            <Type className=" overflow-x-auto  ">
+            </div>
 
-                {images.map((item, index) => (
+        </Fade>
 
-                    <MenuBlock tabindex="1" 
-                    className="text-center text-cus-yellow
-                    hover:text-black hover:bg-cus-yellow/50 focus:text-black focus:bg-cus-yellow cursor-pointer"
-                    key={index}>
+        <div className="">
+
+            <Fade triggerOnce={true} >
+
+                <Type className=" overflow-x-auto  ">
+
+                    {images.map((item, index) => (
                         
-                        {item.image}
+                        <MenuBlock tabindex="1" triggerOnce
+                        className="text-center text-cus-yellow duration-500 
+                        hover:text-black hover:bg-cus-yellow/50 focus:text-black
+                        focus:bg-cus-yellow active:bg-cus-yellow cursor-pointer"
+                        key={index}>
+                            
+                            {item.image}
 
-                        {item.name}
+                            {item.name}
 
-                    </MenuBlock>
-
-                ))}
-
-            </Type>
-
-        </Fade>
-
-        
-        <Fade triggerOnce={true} >
-            <Items>
-                    
-                <MenuList>
-
-                    <Title>Heißgetränke</Title>
-
-                    {Heißgetränke.map((item, index) => (
-
-                        <List key={index}>
-
-                            <p >{item.name}</p>
-
-                            <span >{item.price} €</span>
-
-                        </List>
+                        </MenuBlock>
 
                     ))}
 
-                </MenuList>
+                </Type>
 
-                <MenuList>
+            </Fade>
 
-                <Title>BioLimonaden</Title>
+            
+            <Fade triggerOnce={true} >
 
-                    {BioLimonaden.map((item, index) => (
+                <Items>
+                        
+                    <MenuList>
 
-                        <List key={index}>
+                        <Title>Heißgetränke</Title>
 
-                            <p>{item.name}</p>
+                        {Heißgetränke.map((item, index) => (
 
-                            <span>{item.price} €</span>
+                            <List key={index}>
 
-                        </List>
+                                <p >{item.name}</p>
 
-                    ))}
+                                <span >{item.price} €</span>
 
-                </MenuList>
+                            </List>
 
-                <MenuList>
+                        ))}
 
-                <Title>Soda, Mineral</Title>
+                    </MenuList>
 
-                    {Soda.map((item, index) => (
+                    <MenuList>
 
-                        <List key={index}>
+                        <Title>BioLimonaden</Title>
 
-                            <p>{item.name}</p>
+                        {BioLimonaden.map((item, index) => (
 
-                            <span>{item.price} €</span>
+                            <List key={index}>
 
-                        </List>
+                                <p>{item.name}</p>
 
-                    ))}
+                                <span>{item.price} €</span>
 
-                </MenuList>
+                            </List>
 
-            </Items>
-        </Fade>
-        
+                        ))}
 
+                    </MenuList>
+
+                    <MenuList>
+
+                        <Title>Soda, Mineral</Title>
+
+                        {Soda.map((item, index) => (
+
+                            <List key={index}>
+
+                                <p>{item.name}</p>
+
+                                <span>{item.price} €</span>
+
+                            </List>
+
+                        ))}
+
+                    </MenuList>
+
+                </Items>
+
+            </Fade>
+        </div>
 
     </Container>
   )
@@ -201,10 +214,13 @@ export default Menu
 
 const Container = tw.div`
     p-14
+    
     w-full
-    m:p-3
+    max90:p-3
     font-raleway
     -z-50
+    min90:-mb-10
+    max90:my-5
 `
 
 const Type = tw.div`
@@ -220,9 +236,9 @@ const MenuBlock = tw.div`
     font-bold
     min-w-[130px]
     p-4
-    md:p-0
-    md:py-4
-    mm:px-0
+    max75:p-0
+    max75:py-4
+    max45:px-0
     bg-zinc-900
     flex items-center  justify-center flex-col
 `
@@ -230,7 +246,7 @@ const MenuBlock = tw.div`
 const Items = tw.div`
     flex
     flex-wrap
-    md:flex-col
+    max75:flex-col
 `
 
 const MenuList = tw.div`
@@ -239,7 +255,7 @@ const MenuList = tw.div`
     flex-col
     p-1
     w-1/2
-    md:w-full
+    max75:w-full
     py-2
     pr-5
 `
@@ -251,13 +267,13 @@ const ItemName = tw.div`
 const Title = tw.div`
     text-white
     mb-4
-    sm:text-sm
+    max45:text-sm
 `
 
 const List = tw.div`
     py-1
     flex
-    2sm:text-xsm
+    max27:text-xsm
     text-neutral-200
     justify-between
 `

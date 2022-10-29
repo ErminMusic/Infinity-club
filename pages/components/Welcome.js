@@ -1,34 +1,49 @@
 import tw from "tailwind-styled-components"
-import { Fade } from "react-awesome-reveal"
+import { Fade } from "react-reveal"
+import Image from "next/image"
+import LogoImg from "../../public/images/Infinity.png"
+import Bar from "../../public/images/Bar.png"
+import BarM from "../../public/images/BarM.png"
 
 function Welcome() {
   return (
     <Container className="">
 
-      <Fade triggerOnce={true} >
+      <Fade direction="up" triggerOnce={true} >
 
       <div className=" flex flex-col justify-center items-center w-full">
 
-        <img src='https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FInfinity%20Logo%202.png?alt=media&token=ed69617c-9719-4b50-8cc2-9363bc387b41' 
-          className="w-1/4 lg:w-1/3 m:w-2/5 smd:w-2/5 mm:w-1/2 sm:w-2/3 md:w-1/3 2sm:w-2/3 2sm:px-8 mm:px-6" alt="/" />
+        <div 
+        className="relative w-1/4 max110:w-1/3 max90:w-2/5 
+        max65:w-2/5 max50:w-1/2 max45:w-2/3 max75:w-1/3 
+        max30:w-2/3 max30:px-8 max50:px-6" >
 
-
-        <div className=" w-full flex my-5 items-center mm:justify-items-start justify-center md:flex-col font-cin
-         text-cus-yellow text-6xl lg:text-5xl l:text-5xl md:text-5xl mm:text-4xl mm:w-2/3 sm:text-2xl 
-         2sm:text-3xl  whitespace-nowrap smd:whitespace-normal">
-
-          <img className=" minmd:hidden md:w-2/3 mm:w-full" 
-          src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2FBar%20%26%20Restaurant.png?alt=media&token=c63c3791-5a50-46f0-8d3c-ebc3e4f38f22" />
-
-          <img className=" md:hidden" 
-          src="https://firebasestorage.googleapis.com/v0/b/animix-play.appspot.com/o/figma%2F_Bar%20%26%20Restaurant.png?alt=media&token=586c8055-7b58-4372-b718-a3b92ac924b3" />
+          <Image src={LogoImg} alt="" layout="responsive" />
 
         </div>
-              
-        <p style={{color: "#E5E5E5"}} className='my-4 mb-24 md:mb-12 sm:mb-6 text-center ' 
-        >Welcome to the best clubbing expirience in Graz</p>
 
-      </div>
+        <div className=" w-full flex my-5 items-center max50:justify-items-start justify-center max75:flex-col font-cin
+        text-cus-yellow text-6xl max110:text-5xl max100:text-5xl max75:text-5xl max50:text-4xl max50:w-2/3 max45:text-2xl 
+        max30:text-3xl  whitespace-nowrap max65:whitespace-normal">
+
+          <div className="relative min75:hidden max75:w-2/3 max50:w-full" >
+
+            <Image src={BarM} alt="" layout="responsive" />
+
+          </div>
+
+          <div className="relative max75:hidden ">
+
+            <Image src={Bar} alt="" layout="responsive" />
+
+          </div>
+
+        </div>
+                
+          <p style={{color: "#E5E5E5"}} className='my-4 mb-24 max75:mb-12 max45:mb-6 text-center ' 
+          >Welcome to the best clubbing expirience in Graz</p>
+        
+        </div>
 
       </Fade>
       
@@ -37,11 +52,11 @@ function Welcome() {
       {/* <video loop={true} autoPlay={true} className=" right-0 left-0 top-0 w-full z-100" src="https://player.vimeo.com/video/681571070?h=c8ce8eb88a&title=0&byline=0&portrait=0&muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963" /> */}
 
 
-        <Fade triggerOnce={true} >
+        <Fade direction="up" triggerOnce={true} >
           <ButtonLight >Find Us</ButtonLight>
         </Fade>
 
-        <Fade triggerOnce={true} >
+        <Fade direction="up" triggerOnce={true} >
           <ButtonDark >Our Menu</ButtonDark>
         </Fade>
 
@@ -59,11 +74,11 @@ const Container = tw.div`
   mt-1/2 px-16 pt-32 pb-40
   h-auto w-full
   flex flex-col justify-center items-center font-raleway
-  md:pt-22
-  md:pb-12
-  sm:pt-16
-  /sm:px-0
-  sm:pt-24
+  max75:pt-22
+  max75:pb-12
+  max45:pt-16
+  max35:px-0
+  max45:pt-24
   -z-50
 `
 
@@ -78,16 +93,17 @@ const ButtonLight = tw.div`
   flex flex-col justify-center items-center
   bg-black/50  
   cursor-pointer
-  sm:my-2
-  md:mt-2
-  2xl:text- xl:text- lg:text-xs 
+  max45:my-2
+  max75:mt-2
+  max110:text-xs 
   whitespace-nowrap	
+  duration-500
 `
 
 const ButtonDark = tw(ButtonLight)`
-  opacity-90 
-  
-  2xl:text- xl:text- lg:text-xs
+  bg-black/80   
+  transition-all
+  max110:text-xs
 `
 
 const ButtonHolder = tw.div`
@@ -96,9 +112,9 @@ const ButtonHolder = tw.div`
   items-center
   p-1
   w-1/2
-  2sm:px-8 mm:px-6
-  lg:w-2/3
+  max30:px-8 max50:px-6
+  max110:w-2/3
 
-  md:flex-col-reverse
+  max75:flex-col-reverse
   
 `

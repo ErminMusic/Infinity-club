@@ -46,6 +46,22 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.anime:hover {
+  animation: MoveUpDown 1.5s linear infinite;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
+}
  
 
 @media (max-width:900px) {
