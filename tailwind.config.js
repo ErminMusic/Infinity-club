@@ -71,63 +71,63 @@ module.exports = {
 
       'max20': {'max': '200px'},
 
-      'min150': {'min': '1500px'},
+      'min150': {'min': '1501px'},
 
-      'min145': {'min': '1450px'},
+      'min145': {'min': '1451px'},
 
-      'min140': {'min': '1400px'},
+      'min140': {'min': '1401px'},
 
-      'min135': {'min': '1350px'},
+      'min135': {'min': '1351px'},
 
-      'min130': {'min': '1300px'},
+      'min130': {'min': '1301px'},
 
-      'min125': {'min': '1250px'},
+      'min125': {'min': '1251px'},
 
-      'min120': {'min': '1200px'},
+      'min120': {'min': '1201px'},
 
-      'min115': {'min': '1150px'},
+      'min115': {'min': '1151px'},
 
-      'min110': {'min': '1100px'},
+      'min110': {'min': '1101px'},
 
-      'min105': {'min': '1050px'},
+      'min105': {'min': '1051px'},
 
-      'min100': {'min': '1000px'},
+      'min100': {'min': '1001px'},
 
-      'min95': {'min': '950px'},
+      'min95': {'min': '951px'},
 
-      'min90': {'min': '900px'},
+      'min90': {'min': '901px'},
 
-      'min85': {'min': '850px'},
+      'min85': {'min': '851px'},
 
-      'min80': {'min': '800px'},
+      'min80': {'min': '801px'},
 
-      'min75': {'min': '750px'},
+      'min75': {'min': '751px'},
 
-      'min70': {'min': '700px'},
+      'min70': {'min': '701px'},
 
-      'min65': {'min': '650px'},
+      'min65': {'min': '651px'},
 
-      'min60': {'min': '600px'},
+      'min60': {'min': '601px'},
 
-      'min55': {'min': '550px'},
+      'min55': {'min': '551px'},
 
-      'min50': {'min': '500px'},
+      'min50': {'min': '501px'},
 
-      'min45': {'min': '450px'},
+      'min45': {'min': '451px'},
 
-      'min40': {'min': '400px'},
+      'min40': {'min': '401px'},
 
-      'min35': {'min': '350px'},
+      'min35': {'min': '351px'},
 
-      'min30': {'min': '300px'},
+      'min30': {'min': '301px'},
 
-      'min27': {'min': '275px'},
+      'min27': {'min': '276px'},
 
-      'min25': {'min': '250px'},
+      'min25': {'min': '251px'},
 
-      'min22': {'min': '225px'},
+      'min22': {'min': '226px'},
 
-      'min20': {'min': '200px'},
+      'min20': {'min': '201px'},
 
     },
 

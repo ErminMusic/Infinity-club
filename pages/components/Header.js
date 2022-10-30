@@ -5,6 +5,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import LogoImg from "../../public/images/Logo1.png"
 import Image from "next/image";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Header() {
 
@@ -40,10 +42,12 @@ function Header() {
     if (typeof window !== "undefined") {
         // Client-side-only code
         addEventListener('scroll', changeColor)
+        AOS.init()
     }
 
     useEffect(() => {
         window.addEventListener('scroll', changeColor)
+
     },[])
 
   return (
@@ -129,7 +133,6 @@ const Navbar = tw.div`
     w-1/2
     my-10
     max95:my-8
-    max75:my-5
     flex justify-evenly items-center content-center
     h-full
     max70:hidden

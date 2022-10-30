@@ -1,9 +1,12 @@
-import { Fade } from "react-reveal"
 import tw from "tailwind-styled-components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWineBottle, faWineGlass, faMartiniGlass, faGlassWater, faBowlFood } from '@fortawesome/free-solid-svg-icons'
 import Image from "next/image";
 import MenuImg from "../../public/images/Menu.png"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+import { TabGroup } from '@statikly/funk'
 
 function Menu() {
 
@@ -83,127 +86,143 @@ function Menu() {
     const images = [
         {
             image: <FontAwesomeIcon className=" text-3xl" icon={faWineBottle} />,
-            name: "Champaign"    
+            bg: true,
+            name: "Champaign"
         },
         {
             image: <FontAwesomeIcon className=" text-3xl" icon={faWineGlass} />,
+            bg: false,
             name: "Wine"
         },
         {
             image: <FontAwesomeIcon className=" text-3xl" icon={faMartiniGlass} />,
+            bg: false,
             name: "Coctails"
         },
         {
             image: <FontAwesomeIcon className=" text-3xl" icon={faGlassWater} />,
+            bg: false,
             name: "Non-alcoholic"
         },
         {
             image: <FontAwesomeIcon className=" text-3xl" icon={faBowlFood} />,
+            bg: false,
             name: "Food"
         },
     ]
 
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
   return (
-    <Container >
+    <Container data-aos="fade-up"  data-aos-duration="1500" >
 
-        <Fade triggerOnce={true}>
 
-            <div className="w-1/3 max45:w-1/2">
+        <div data-aos="fade-up" data-aos-duration="1500" className="w-1/3 max45:w-1/2">
 
-                <Image src={MenuImg} alt="" layout="responsive" />
+            <Image src={MenuImg} alt="" layout="responsive" />
 
-            </div>
+        </div>
 
-        </Fade>
 
         <div className="">
 
-            <Fade triggerOnce={true} >
 
-                <Type className=" overflow-x-auto  ">
+            <Type className=" overflow-x-auto" data-aos="fade-up" data-aos-duration="1500">
 
+                <TabGroup numTabs={5} direction={TabGroup.direction.HORIZONTAL}>
                     {images.map((item, index) => (
                         
-                        <MenuBlock tabindex="1" triggerOnce
-                        className="text-center text-cus-yellow duration-500 
-                        hover:text-black hover:bg-cus-yellow/50 focus:text-black
-                        focus:bg-cus-yellow active:bg-cus-yellow cursor-pointer"
-                        key={index}>
-                            
-                            {item.image}
+                        <MenuBlock key={index}>
 
-                            {item.name}
+                            <TabGroup.TabList>
+                            <TabGroup.Tab
+                                index={index}
+                                className="     
+                                hover:bg-cus-yellow/50 hover:text-black
+                                font-bold cursor-pointer
+                                transition-all
+                                w-full min-w-[130px]
+                                p-4 max75:p-0 max100:px-2 max75:px-0 max75:py-4 max45:px-0
+                                flex items-center justify-center flex-col"
+                                activeClassName="bg-cus-yellow text-black"
+                                inactiveClassName="bg-zinc-900 text-cus-yellow "
+                            >
+                                {item.image}
 
+                                {item.name}
+                                
+                            </TabGroup.Tab>
+                            </TabGroup.TabList>
+                        
                         </MenuBlock>
 
                     ))}
 
-                </Type>
+                </TabGroup>
 
-            </Fade>
+            </Type>
+        
 
-            
-            <Fade triggerOnce={true} >
+            <Items>
+                    
+                <MenuList data-aos="fade-up" data-aos-duration="1500">
 
-                <Items>
-                        
-                    <MenuList>
+                    <Title>Heißgetränke</Title>
 
-                        <Title>Heißgetränke</Title>
+                    {Heißgetränke.map((item, index) => (
 
-                        {Heißgetränke.map((item, index) => (
+                        <List key={index}>
 
-                            <List key={index}>
+                            <p >{item.name}</p>
 
-                                <p >{item.name}</p>
+                            <span >{item.price} €</span>
 
-                                <span >{item.price} €</span>
+                        </List>
 
-                            </List>
+                    ))}
 
-                        ))}
+                </MenuList>
 
-                    </MenuList>
+                <MenuList data-aos="fade-up" data-aos-duration="1500">
 
-                    <MenuList>
+                    <Title>BioLimonaden</Title>
 
-                        <Title>BioLimonaden</Title>
+                    {BioLimonaden.map((item, index) => (
 
-                        {BioLimonaden.map((item, index) => (
+                        <List key={index}>
 
-                            <List key={index}>
+                            <p>{item.name}</p>
 
-                                <p>{item.name}</p>
+                            <span>{item.price} €</span>
 
-                                <span>{item.price} €</span>
+                        </List>
 
-                            </List>
+                    ))}
 
-                        ))}
+                </MenuList>
 
-                    </MenuList>
+                <MenuList data-aos="fade-up" data-aos-duration="1500">
 
-                    <MenuList>
+                    <Title>Soda, Mineral</Title>
 
-                        <Title>Soda, Mineral</Title>
+                    {Soda.map((item, index) => (
 
-                        {Soda.map((item, index) => (
+                        <List key={index}>
 
-                            <List key={index}>
+                            <p>{item.name}</p>
 
-                                <p>{item.name}</p>
+                            <span>{item.price} €</span>
 
-                                <span>{item.price} €</span>
+                        </List>
 
-                            </List>
+                    ))}
 
-                        ))}
+                </MenuList>
 
-                    </MenuList>
+            </Items>
 
-                </Items>
-
-            </Fade>
         </div>
 
     </Container>
@@ -214,7 +233,6 @@ export default Menu
 
 const Container = tw.div`
     p-14
-    
     w-full
     max90:p-3
     font-raleway
@@ -230,17 +248,8 @@ const Type = tw.div`
 `
 
 const MenuBlock = tw.div`
-    hover:bg-cus-yellow 
     transition-all
     w-full
-    font-bold
-    min-w-[130px]
-    p-4
-    max75:p-0
-    max75:py-4
-    max45:px-0
-    bg-zinc-900
-    flex items-center  justify-center flex-col
 `
 
 const Items = tw.div`

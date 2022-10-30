@@ -54,6 +54,16 @@ a {
   bottom: 0;
 }
 
+.menu[aria-current="true"]{
+  background-color: #EAD185;
+  color: #18181B;
+}
+
+.menu[aria-current="false"]{
+  background-color: #18181B;
+  color: #EAD185;
+}
+
 @keyframes MoveUpDown {
   0%, 100% {
     bottom: 0;

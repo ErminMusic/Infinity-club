@@ -1,19 +1,25 @@
 import tw from "tailwind-styled-components"
-import { Fade } from "react-reveal"
 import Image from "next/image"
 import LogoImg from "../../public/images/Infinity.png"
 import Bar from "../../public/images/Bar.png"
-import BarM from "../../public/images/BarM.png"
+import BarM from "../../public/images/BarMM.png"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 function Welcome() {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
+
   return (
-    <Container className="">
+    <Container data-aos="fade-up" data-aos-duration="1000" className="">
 
-      <Fade direction="up" triggerOnce={true} >
+      <div data-aos="fade-up" data-aos-duration="1000" className=" flex flex-col justify-center items-center w-full">
 
-      <div className=" flex flex-col justify-center items-center w-full">
-
-        <div 
+        <div data-aos="fade-up" data-aos-duration="1000"
         className="relative w-1/4 max110:w-1/3 max90:w-2/5 
         max65:w-2/5 max50:w-1/2 max45:w-2/3 max75:w-1/3 
         max30:w-2/3 max30:px-8 max50:px-6" >
@@ -22,11 +28,16 @@ function Welcome() {
 
         </div>
 
-        <div className=" w-full flex my-5 items-center max50:justify-items-start justify-center max75:flex-col font-cin
-        text-cus-yellow text-6xl max110:text-5xl max100:text-5xl max75:text-5xl max50:text-4xl max50:w-2/3 max45:text-2xl 
-        max30:text-3xl  whitespace-nowrap max65:whitespace-normal">
+        <div data-aos="fade-up" data-aos-duration="1000" 
+          className=" 
+          w-full flex my-5 items-center max50:justify-items-start
+          justify-center max75:flex-col font-cin
+        text-cus-yellow text-6xl max110:text-5xl 
+          max100:text-5xl max75:text-5xl max50:text-4xl 
+          max50:w-2/3 max45:text-2xl max30:text-3xl  
+          whitespace-nowrap max75:whitespace-normal">
 
-          <div className="relative min75:hidden max75:w-2/3 max50:w-full" >
+          <div className="relative min75:hidden max50:w-full" >
 
             <Image src={BarM} alt="" layout="responsive" />
 
@@ -45,20 +56,12 @@ function Welcome() {
         
         </div>
 
-      </Fade>
       
-      <ButtonHolder >
+      <ButtonHolder data-aos="fade-up" data-aos-duration="1000">
 
-      {/* <video loop={true} autoPlay={true} className=" right-0 left-0 top-0 w-full z-100" src="https://player.vimeo.com/video/681571070?h=c8ce8eb88a&title=0&byline=0&portrait=0&muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963" /> */}
+        <ButtonLight >Find Us</ButtonLight>
 
-
-        <Fade direction="up" triggerOnce={true} >
-          <ButtonLight >Find Us</ButtonLight>
-        </Fade>
-
-        <Fade direction="up" triggerOnce={true} >
-          <ButtonDark >Our Menu</ButtonDark>
-        </Fade>
+        <ButtonDark >Our Menu</ButtonDark>
 
       </ButtonHolder>
 
@@ -114,7 +117,6 @@ const ButtonHolder = tw.div`
   w-1/2
   max30:px-8 max50:px-6
   max110:w-2/3
-
   max75:flex-col-reverse
   
 `
