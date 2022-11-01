@@ -1,24 +1,31 @@
-import tw from "tailwind-styled-components"
 import About from "./components/About"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Location from "./components/Location"
 import Menu from "./components/Menu"
+import TopButton from "./components/SmallComponents/index/TopButton"
 import Welcome from "./components/Welcome"
-import BackToTop from "react-back-to-top-button"
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
 
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
 
-    <Container className="relative overflow-hidden">
+    <div 
+    className="relative overflow-hidden h-auto 
+    flex justify-center align-center bg-zinc-800">
 
       <div  className="image absolute right-0 left-0  z-5 "  />
 
       <div className="background absolute "  />
      
-      <Wrap >
+      <div className=" w-4/5 max75:w-full flex flex-col items-center  z-10" >
 
         <Header />
         
@@ -32,43 +39,10 @@ export default function Home() {
 
         <Footer />
 
-        <BackToTop showAt={10} easing="easeInOutQuint" 
-        className="w-auto relative h-auto transition-all right-4 bottom-4" >
+        <TopButton />
 
-          <Arrow style={{fontSize: 35}} />
+      </div>
 
-        </BackToTop>
-
-      </Wrap>
-
-    </Container>
+    </div>
   )
 }
-
-const Container = tw.div`
-  h-auto
-  flex
-  justify-center
-  align-center
-  bg-zinc-800
-  
-`
-
-const Wrap = tw.div`
-  w-4/5
-  flex
-  flex-col
-  items-center
-  max75:w-full
-  z-10
-`
-
-const Arrow = tw(ExpandLessIcon)`
-  rounded-full text-cus-yellow
-  border-2 border-cus-yellow
-  hover:bg-cus-yellow/50 
-  transition-all 
-  anime
-  duration-500
-  z-100
-`
