@@ -8,7 +8,7 @@ function Welcome() {
   return (
     <div data-aos="fade-up" data-aos-duration="1000" 
     className="
-    font-raleway mt-1/2 px-16 pt-32 pb-40 h-auto w-full
+    font-raleway mt-1/2 px-16 pt-40 pb-40 h-auto w-full
     flex flex-col justify-center items-center -z-50
     max75:pt-22 max75:pb-12 max35:px-0 max45:pt-24">
 

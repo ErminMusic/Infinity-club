@@ -23,7 +23,7 @@ function AboutDivOne() {
 
         <div className="pl-10 w-100% h-60% relative mt-5 max90:mx-0 max90:px-0 max90:mt-5 max110:mt-8">
 
-        <Image src={Bar2} alt="" layout="fill" />
+        <Image src={Bar2} placeholder="blur" alt="" layout="fill" />
 
       </div>
 

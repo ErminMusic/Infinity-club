@@ -12,7 +12,7 @@ function AboutDivTwo() {
 
         <div className=" w-100% h-60% relative max90:mx-0 max90:px-0 max90:mt-5">
 
-          <Image src={Bar1} alt="" layout="responsive" />
+          <Image src={Bar1} placeholder="blur" alt="" layout="responsive" />
 
         </div>
 
