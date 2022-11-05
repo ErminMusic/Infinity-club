@@ -419,10 +419,9 @@ function Type() {
 
                     <MenuList drinkName={Extra.title} drinkList={Extra.collection} />
 
-
                 </div>
 
-            </TabGroup.TabPanel>
+            </TabGroup.TabPanel>    
         </TabGroup>
     </div>
 
