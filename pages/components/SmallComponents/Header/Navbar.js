@@ -19,16 +19,18 @@ function NavbarItem() {
 
     <>
         {NavbarItems.map((item, index) => (
-            <div className='my-auto min70:h-full
+            <div 
+            className='my-auto min70:h-full cursor-pointer
             flex justify-start justify-content-start items-start
-            px-1 max65:px-0 max70:py-1 text-xl z-100 cursor-pointer
-            max110:text-xxs  max30:text-smm max50:text-xs'
+            px-1 max65:px-0 max70:py-1 text-xl z-100 
+            max110:text-xxs max30:text-smm max50:text-xs'
      
                key={index} style={{color: "#afafaf"}} >
                 
                 <div className=" relative uppercase max70:mr-8">
     
-                    <div className='    
+                    <div 
+                    className='    
                     relative 
                     uppercase tracking-wide
                     hover:after:opacity-100 
@@ -40,7 +42,11 @@ function NavbarItem() {
                     after:opacity-0 after:transform 
                     after:scale-x-0 after:transition-all 
                     after:duration-300' 
-                    >{item.title}</div>
+                    >
+                        
+                        {item.title}
+                        
+                    </div>
 
                 </div>
 

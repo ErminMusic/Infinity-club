@@ -4,7 +4,7 @@ function MenuList( { drinkName, drinkList } ) {
     className=" flex flex-wrap flex-col
     p-1 py-2 pr-5 w-1/2 max75:w-full">
 
-      <div className="text-white max45:text-sm mb-4" >
+      <div className="text-white text-lg font-bold mb-4" >
         {drinkName}
       </div>
   

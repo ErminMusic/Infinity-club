@@ -47,6 +47,26 @@ a {
   transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+.topButton {
+  z-index: 100;
+  position: fixed;
+  transition: 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+} 
+
+.topButton:hover {
+  animation: MoveUpDown 1.5s linear infinite;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(-25%);
+    transition: 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  50% {
+    transform: none;
+  }
+}
+
 .background {
   position: absolute;
   width: 100%;
@@ -71,21 +91,7 @@ a {
   background-size: cover;
 }
 
-.anime:hover {
-  animation: MoveUpDown 1.5s linear infinite;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
 
-@keyframes MoveUpDown {
-  0%, 100% {
-    bottom: 0;
-  }
-  50% {
-    bottom: 10px;
-  }
-}
  
 
 @media (max-width:900px) {

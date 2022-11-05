@@ -7,7 +7,7 @@ import Logo from "./SmallComponents/Footer/Logo";
 function Footer() {
   return (
     <div data-aos="fade-up" data-aos-duration="1000"
-    className="px-14 pb-2 max45:p-4
+    className="px-14 max45:p-4
     flex flex-col max90:items-center
     font-raleway w-full h-full -z-50">
    

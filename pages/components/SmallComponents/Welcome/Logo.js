@@ -13,13 +13,19 @@ function Logo() {
 
       <div className="relative min75:hidden max50:w-full" >
 
-        <Image src={BarM} alt="" layout="responsive" />
+        <Image 
+        src={BarM} 
+        alt="" 
+        layout="responsive" />
 
       </div>
 
       <div className="relative max75:hidden ">
 
-        <Image src={Bar} alt="" layout="responsive" />
+        <Image 
+        src={Bar} 
+        alt="" 
+        layout="responsive" />
 
       </div>
 

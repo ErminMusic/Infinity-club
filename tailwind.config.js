@@ -203,6 +203,5 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require("tailwind-gradient-mask-image")
   ],
 }

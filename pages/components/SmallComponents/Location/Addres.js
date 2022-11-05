@@ -3,7 +3,8 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 function Addres() {
   return (
     <div data-aos="fade-up" data-aos-duration="1000" 
-    className=" m-auto text-cus-yellow my-4 flex flex-col content-center items-center">
+    className=" m-auto text-cus-yellow my-4 
+    flex flex-col content-center items-center">
 
       <h2 className="text-lg" >LOCATION</h2>
 

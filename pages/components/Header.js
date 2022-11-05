@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 import NavbarItem from "./SmallComponents/Header/Navbar";
 import Menu from "./SmallComponents/Header/Menu";
 import MenuMobile from "./SmallComponents/Header/MenuMobile";
@@ -20,9 +19,9 @@ function Header() {
         }
     }
 
-    if (typeof window !== "undefined") {
-        addEventListener('scroll', changeColor)
-    }
+    // if (typeof window !== "undefined") {
+    //     addEventListener('scroll', changeColor)
+    // }
 
     useEffect(() => {
         window.addEventListener('scroll', changeColor)

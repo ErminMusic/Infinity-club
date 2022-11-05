@@ -19,13 +19,18 @@ function Welcome() {
         max65:w-2/5 max50:w-1/2 max45:w-2/3 max75:w-1/3 
         max30:w-2/3 max30:px-8 max50:px-6" >
 
-          <Image src={LogoImg} alt="" layout="responsive" />
+          <Image 
+          src={LogoImg} 
+          alt="" 
+          layout="responsive" />
 
         </div>
 
         <Logo />
               
-        <p style={{color: "#E5E5E5"}} className='my-4 mb-24 max60:text-lg max45:text-xl max30:text-lg max75:mb-12 max45:mb-6 text-center ' 
+        <p 
+        className='my-4 text-gray-200 mb-24 max60:text-lg max45:text-xl 
+        max30:text-lg max75:mb-12 max45:mb-6 text-center ' 
         >Welcome to the best clubbing expirience in Graz</p>
         
       </div>
