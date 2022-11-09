@@ -5,44 +5,6 @@ import Logo from "./SmallComponents/Location/Logo";
 
 function Location() {
 
-    const Workday = [
-        {
-            day: "Monday",
-            time: "3:00 PM-12:00 AM",
-            bg: true
-        },
-        {
-            day: "Tuesday",
-            time: "3:00 PM-12:00 AM",
-            bg: true
-        },
-        {
-            day: "Wednesday",
-            time: "3:00 PM-12:00 AM",
-            bg: true
-        },
-        {
-            day: "Thursday",
-            time: "3:00 PM-12:00 AM",
-            bg: true
-        },
-        {
-            day: "Friday",
-            time: "3:00 PM-05:00 AM",
-            bg: true
-        },
-        {
-            day: "Saturday",
-            time: "3:00 PM-05:00 AM",
-            bg: false
-        },
-        {
-            day: "Sunday",
-            time: "3:00 PM-12:00 AM",
-            bg: false
-        },
-    ]
-
   return (
     <div data-aos="fade-up" data-aos-duration="1000" id="LOCATION"
     className="font-raleway flex flex-col
@@ -68,7 +30,7 @@ function Location() {
                     <p className="text-center w-full text-lg ">WORKING HOURS</p>
                 </div>
 
-                <WorkTime Workday={Workday} />
+                <WorkTime />
 
                 <Addres />
 

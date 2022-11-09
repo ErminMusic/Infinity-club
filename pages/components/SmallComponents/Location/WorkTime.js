@@ -1,4 +1,42 @@
-function WorkTime( { Workday } ) {
+function WorkTime() {
+
+    const Workday = [
+        {
+            day: "Monday",
+            time: "3:00 PM-12:00 AM",
+            bg: true
+        },
+        {
+            day: "Tuesday",
+            time: "3:00 PM-12:00 AM",
+            bg: true
+        },
+        {
+            day: "Wednesday",
+            time: "3:00 PM-12:00 AM",
+            bg: true
+        },
+        {
+            day: "Thursday",
+            time: "3:00 PM-12:00 AM",
+            bg: true
+        },
+        {
+            day: "Friday",
+            time: "3:00 PM-05:00 AM",
+            bg: true
+        },
+        {
+            day: "Saturday",
+            time: "3:00 PM-05:00 AM",
+            bg: false
+        },
+        {
+            day: "Sunday",
+            time: "3:00 PM-12:00 AM",
+            bg: false
+        },
+    ]
   return (
     <div data-aos="fade-up" data-aos-duration="1000" 
     className=" flex flex-col w-full max30:text-xs">
