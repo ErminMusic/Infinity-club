@@ -56,7 +56,6 @@ function Location() {
             In the heart of the Graz
         </p>
 
-
         <div className="flex max75:flex-col bg-zinc-700 h-full">
     
             <div 
