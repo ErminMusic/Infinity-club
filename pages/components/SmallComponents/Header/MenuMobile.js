@@ -1,5 +1,6 @@
 import NavbarItem from "./Navbar"
-import CloseIcon from '@material-ui/icons/Close';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 function MenuMobile( { setShowMenu, showMenu } ) {
   return (
@@ -10,7 +11,7 @@ function MenuMobile( { setShowMenu, showMenu } ) {
     min70:hidden"
     style={{ transform: showMenu ? `translateY(0)`: `translateY(-120%)` }} >
 
-      <CloseIcon onClick={() => setShowMenu(false)} style={{fontSize: 28, marginRight: 28}}  
+      <FontAwesomeIcon icon={faXmark} onClick={() => setShowMenu(false)} style={{fontSize: 28, marginRight: 28}}  
       className=" text-cus-yellow cursor-pointer" />
 
       <NavbarItem />

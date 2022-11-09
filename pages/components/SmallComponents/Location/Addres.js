@@ -1,4 +1,6 @@
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+
 
 function Addres() {
   return (
@@ -9,8 +11,8 @@ function Addres() {
       <h2 className="text-lg" >LOCATION</h2>
 
       <div>
-        <LocationOnIcon /> 
-        <span className=" max30:text-smm max45:text-sm text-white">
+        <FontAwesomeIcon icon={faLocationDot} /> 
+        <span className=" ml-1 max30:text-smm max45:text-sm text-white">
           Alte Poststraße 460-462 8055 Graz
         </span>
       </div>

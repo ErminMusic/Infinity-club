@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
 
 function TopButton() {
 
@@ -26,9 +27,9 @@ function TopButton() {
     <>
       {show && (
         <div className=" topButton z-100 right-12 bottom-12 border-[3px] 
-        border-cus-yellow text-cus-yellow rounded-full p-0.5 cursor-pointer"
+        border-cus-yellow text-cus-yellow rounded-full p-0.5 px-1 cursor-pointer"
         onClick={scrollToTop}>
-          <ExpandLessIcon style={{fontSize: 32}}/>
+          <FontAwesomeIcon icon={faAngleUp} style={{fontSize: 32}}/>
         </div>
       )}
     </>

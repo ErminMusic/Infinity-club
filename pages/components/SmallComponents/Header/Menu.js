@@ -1,4 +1,5 @@
-import MenuIcon from '@material-ui/icons/Menu';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 function Menu( { setShowMenu, showMenu } ) {
   return (
@@ -7,7 +8,7 @@ function Menu( { setShowMenu, showMenu } ) {
     flex justify-end items-center " >
             
       <div onClick={() => setShowMenu(true)}>
-        <MenuIcon style={{fontSize: 28, zIndex: showMenu ? 0 : 50}}  
+        <FontAwesomeIcon icon={faBars} style={{fontSize: 28, zIndex: showMenu ? 0 : 50}}  
         className=" text-cus-yellow cursor-pointer" />
       </div>
     
