@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 
 function MenuList( { drinkName, drinkList } ) {
 
-  const [ name, setName ] = useState([drinkName])
+  const [ name, setName ] = useState([])
 
-  const [ list, setList ] = useState([drinkList])
+  const [ list, setList ] = useState([])
 
   
 
   useEffect(() => {
+    setName(drinkName)
     setList(drinkList)
   }, [])
 
