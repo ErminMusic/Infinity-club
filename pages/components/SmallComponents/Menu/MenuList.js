@@ -1,14 +1,27 @@
-function MenuList(props) {
+import { useState, useEffect } from "react";
+
+function MenuList( { drinkName, drinkList } ) {
+
+  const [ name, setName ] = useState([drinkName])
+
+  const [ list, setList ] = useState([drinkList])
+
+  
+
+  useEffect(() => {
+    setList(drinkList)
+  }, [])
+
   return (
     <div data-aos="fade-up" data-aos-duration="1500" 
     className=" flex flex-wrap flex-col
     p-1 py-2 pr-5 w-1/2 max75:w-full">
 
       <div className="text-white text-lg font-bold mb-4" >
-        {props.drinkName}
+        {name}
       </div>
   
-      {props.drinkList.map((item, index) => (
+      {list.map((item, index) => (
 
         <div className=" 
         flex justify-between py-1

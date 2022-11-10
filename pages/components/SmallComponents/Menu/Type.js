@@ -340,6 +340,8 @@ function Type() {
 
             </div>
 
+            
+
 
             <TabGroup.TabPanel 
             index={0} 
