@@ -1,6 +1,6 @@
 import Image from "next/image"
-import Bar from "../../../../public/images/Bar.png"
-import BarM from "../../../../public/images/BarMM.png"
+import Bar from "../../../../public/images/Bar.webp"
+import BarM from "../../../../public/images/BarMM.webp"
 
 function Logo() {
   return (
@@ -15,6 +15,7 @@ function Logo() {
 
         <Image 
         src={BarM} 
+        priority
         alt="" 
         layout="responsive" />
 

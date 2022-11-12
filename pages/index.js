@@ -8,6 +8,8 @@ import Welcome from "./components/Welcome"
 import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Image from "next/image"
+import Head from "next/head"
 
 export default function Home() {
 
@@ -21,7 +23,11 @@ export default function Home() {
     className="relative overflow-hidden h-auto 
     flex justify-center align-center bg-zinc-800">
 
-      <div  className="image absolute right-0 left-0  z-5 "  />
+      <Head>
+        <title>Infinity Club</title>
+      </Head>
+
+      <div alt="" loading="lazy" className="image absolute right-0 left-0  z-5 "  />
 
       <div className="background absolute "  />
      

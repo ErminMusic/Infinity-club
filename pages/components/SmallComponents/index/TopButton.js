@@ -26,8 +26,8 @@ function TopButton() {
   return (
     <>
       {show && (
-        <div className=" topButton z-100 right-12 bottom-12 border-[3px] 
-        border-cus-yellow text-cus-yellow rounded-full p-0.5 px-1 cursor-pointer"
+        <div className=" w-[45px] h-[45px] topButton z-100 right-12 bottom-12 border-[3px] text-[32px]
+        border-cus-yellow text-cus-yellow rounded-full p-[3px] px-1.5 cursor-pointer"
         onClick={scrollToTop}>
           <FontAwesomeIcon icon={faAngleUp} style={{fontSize: 32}}/>
         </div>

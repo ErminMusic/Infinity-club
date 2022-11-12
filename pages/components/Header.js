@@ -33,7 +33,7 @@ function Header() {
         <Logo />
 
         <div className="    
-        h-full w-1/2 my-10 max95:my-8 max70:hidden
+        h-full w-1/2 my-10 max95:my-8 max70:hidden 
         flex justify-evenly items-center content-center">
 
             <NavbarItem />

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MenuImg from "../../../../public/images/Menu.png"
+import MenuImg from "../../../../public/images/Menu.webp"
 
 function Logo() {
   return (

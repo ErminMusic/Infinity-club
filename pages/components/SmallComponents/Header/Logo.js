@@ -1,4 +1,4 @@
-import LogoImg from "../../../../public/images/Logo1.png"
+import LogoImg from "../../../../public/images/Logo1.webp"
 import Image from "next/image";
 
 function Logo() {

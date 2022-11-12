@@ -7,23 +7,38 @@ function Type() {
 
     const images = [
         {
-            image: <FontAwesomeIcon className=" text-3xl" icon={faWineBottle} />,
-            name: "Champaign",
+            image: 
+                <div className='w-[40px]  text-lg' >
+                    <FontAwesomeIcon icon={faWineBottle} />
+                </div>,
+            name: "Champaign ",
         },
         {
-            image: <FontAwesomeIcon className=" text-3xl" icon={faWineGlass} />,
+            image: 
+                <div className='w-[25px]  text-lg' > 
+                    <FontAwesomeIcon icon={faWineGlass} /> 
+                </div> ,
             name: "Wine"
         },
         {
-            image: <FontAwesomeIcon className=" text-3xl" icon={faMartiniGlass} />,
+            image: 
+                <div className='w-[40px]  text-lg' > 
+                    <FontAwesomeIcon icon={faMartiniGlass} /> 
+                </div> ,
             name: "Coctails"
         },
         {
-            image: <FontAwesomeIcon className=" text-3xl" icon={faGlassWater} />,
+            image: 
+                <div className='w-[35px]  text-lg' > 
+                    <FontAwesomeIcon icon={faGlassWater} /> 
+                </div> ,
             name: "Non-alcoholic"
         },
         {
-            image: <FontAwesomeIcon className=" text-3xl" icon={faBowlFood} />,
+            image: 
+                <div className='w-[40px]  text-lg' > 
+                    <FontAwesomeIcon icon={faBowlFood} /> 
+                </div> ,
             name: "Food"
         },
     ]
@@ -327,7 +342,10 @@ function Type() {
                             inactiveClassName="bg-zinc-900 text-cus-yellow "
                             >
 
-                                {item.image}
+
+                                {item.image}  
+
+                                
 
                                 {item.name}
                                 

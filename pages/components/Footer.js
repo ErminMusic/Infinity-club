@@ -1,5 +1,3 @@
-import Image from "next/image"
-import LogoImg from "../../public/images/Infinity.png"
 import Copyrights from "./SmallComponents/Footer/Copyrights";
 import BottomInfo from "./SmallComponents/Footer/BottomInfo";
 import Logo from "./SmallComponents/Footer/Logo";

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Bar1 from "../../../../public/images/Bar1.png"
+import Bar1 from "../../../../public/images/Bar1.webp"
 
 function AboutDivTwo() {
 
@@ -9,7 +9,7 @@ function AboutDivTwo() {
 
   return (
     <div data-aos="fade-up" data-aos-duration="1000" 
-    className=" w-1/2 max90:w-full h-auto p-3
+    className=" w-1/2 max90:w-full h-auto p-3 
     max90:flex flex-col justify-center items-center "  >
 
       <div className=" max90:flex max90:flex-col-reverse">

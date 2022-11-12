@@ -10,8 +10,13 @@ function Addres() {
 
       <h2 className="text-lg" >LOCATION</h2>
 
-      <div>
-        <FontAwesomeIcon icon={faLocationDot} /> 
+      <div className='flex' >
+
+        <div className="w-[16px] ">
+          <FontAwesomeIcon icon={faLocationDot} />
+        </div>
+         
+
         <span className=" ml-1 max30:text-smm max45:text-sm text-white">
           Alte Poststraße 460-462 8055 Graz
         </span>

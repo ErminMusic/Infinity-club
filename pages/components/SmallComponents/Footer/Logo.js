@@ -1,5 +1,5 @@
 import Image from "next/image"
-import LogoImg from "../../../../public/images/Infinity.png"
+import LogoImg from "../../../../public/images/Infinity.webp"
 
 function Logo() {
   return (
@@ -9,7 +9,7 @@ function Logo() {
 
         <Image 
         src={LogoImg} 
-        alt="" l
+        alt="" 
         ayout="responsive" />
 
     </div>
