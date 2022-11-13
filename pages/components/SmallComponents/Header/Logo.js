@@ -12,7 +12,9 @@ function Logo() {
         <Image 
         src={LogoImg} 
         layout="responsive" 
-        alt="/" />
+        alt="/"
+        priority={true}
+        />
 
       </div>
 

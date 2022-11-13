@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faSquareFacebook } from '@fortawesome/free-brands-svg-icons'
 import AboutDivOne from './SmallComponents/About/AboutDivOne';
 import AboutDivTwo from './SmallComponents/About/AboutDivTwo';
-import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
+
 function About() {
   return (
 

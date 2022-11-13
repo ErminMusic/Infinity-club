@@ -9,10 +9,14 @@ function MenuMobile( { setShowMenu, showMenu } ) {
     bg-cus-gray rounded w-auto py-4 transition-all
     flex flex-col gap-3 justify-center items-end z-20
     min70:hidden"
-    style={{ transform: showMenu ? `translateY(0)`: `translateY(-120%)` }} >
+    style={{ transform: showMenu ? `translateY(0)`: `translateY(-120%)` }} 
+    >
 
-      <FontAwesomeIcon icon={faXmark} onClick={() => setShowMenu(false)} style={{fontSize: 28, marginRight: 28}}  
-      className=" text-cus-yellow cursor-pointer" />
+      <div className=" w-[20px] mr-8" >
+        <FontAwesomeIcon icon={faXmark} onClick={() => setShowMenu(false)}  
+        className=" text-cus-yellow cursor-pointer" />
+      </div>
+
 
       <NavbarItem />
 

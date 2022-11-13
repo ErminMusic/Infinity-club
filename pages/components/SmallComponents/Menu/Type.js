@@ -2,6 +2,7 @@ import { TabGroup } from '@statikly/funk'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWineBottle, faWineGlass, faMartiniGlass, faGlassWater, faBowlFood } from '@fortawesome/free-solid-svg-icons'
 import MenuList from './MenuList'
+import { useState, useEffect } from "react";
 
 function Type() {
 
@@ -316,20 +317,29 @@ function Type() {
         ]
     }
 
+    const [ mount, setMount ] = useState(false)
+
+    useEffect(() => {
+        setMount(true)
+    }, [])
+
   return (
     <div className='flex flex-col' >
+        {mount ? (
+            <TabGroup  numTabs={4} direction={TabGroup.direction.HORIZONTAL}>
 
-        <TabGroup numTabs={5} direction={TabGroup.direction.HORIZONTAL}>
-
-            <div 
+            <div  
             className=" flex w-full my-6 overflow-x-auto"
             data-aos="fade-up" data-aos-duration="1500">
             
                 {images.map((item, index) => (
                     
-                    <div className="transition-all w-full" key={index}>
-                        <TabGroup.TabList>
+                    <div className="transition-all w-full"  key={index}
+                    >
+                        <TabGroup.TabList >
+
                             <TabGroup.Tab
+                            key={index}
                             index={index}
                             className="     
                             hover:bg-cus-yellow/90 hover:text-black
@@ -338,18 +348,17 @@ function Type() {
                             w-full min-w-[130px]
                             p-4 max75:p-0 max100:px-2 max75:px-0 max75:py-4 max45:px-0
                             flex items-center justify-center flex-col"
+
                             activeClassName="bg-cus-yellow text-black"
                             inactiveClassName="bg-zinc-900 text-cus-yellow "
                             >
 
-
                                 {item.image}  
-
-                                
 
                                 {item.name}
                                 
                             </TabGroup.Tab>
+
                         </TabGroup.TabList>
                     
                     </div>
@@ -357,17 +366,15 @@ function Type() {
                 ))}
 
             </div>
-
             
-
-
             <TabGroup.TabPanel 
             index={0} 
+            as="div"
             activeClassName="opacity-100 duration-500 translate-x-0"
             inactiveClassName="absolute opacity-0 -translate-x-2"
             >
 
-                <div className=" flex flex-wrap max75:flex-col w-full">
+                <div aria-labelledby='0' className=" flex flex-wrap max75:flex-col w-full">
 
                     <MenuList drinkName={Heißgetränke.title} drinkList={Heißgetränke.collection} />
                     
@@ -381,11 +388,12 @@ function Type() {
 
             <TabGroup.TabPanel 
             index={1} 
+            as="div"
             activeClassName="opacity-100 duration-500 translate-x-0"
             inactiveClassName="absolute opacity-0 -translate-x-2"
             >
                 
-                <div className=" flex flex-wrap max75:flex-col w-full">
+                <div aria-labelledby='1' className=" flex flex-wrap max75:flex-col w-full">
 
                     <MenuList drinkName={RedWine.title} drinkList={RedWine.collection} />
                     
@@ -397,11 +405,12 @@ function Type() {
 
             <TabGroup.TabPanel 
             index={2} 
+            as="div"
             activeClassName="opacity-100 duration-500 translate-x-0"
             inactiveClassName="absolute opacity-0 -translate-x-2"
             >
                 
-                <div className=" flex flex-wrap max75:flex-col w-full">
+                <div aria-labelledby='2' className=" flex flex-wrap max75:flex-col w-full">
 
                     <MenuList drinkName={DryMartini.title} drinkList={DryMartini.collection} />
                     
@@ -413,11 +422,12 @@ function Type() {
 
             <TabGroup.TabPanel 
             index={3} 
+            as="div"
             activeClassName="opacity-100 duration-500 translate-x-0"
             inactiveClassName="absolute opacity-0 -translate-x-2"
             >
                 
-                <div className=" flex flex-wrap max75:flex-col w-full">
+                <div aria-labelledby='3' className=" flex flex-wrap max75:flex-col w-full">
 
                     <MenuList drinkName={NonAlchocolic.title} drinkList={NonAlchocolic.collection} />
 
@@ -427,11 +437,12 @@ function Type() {
 
             <TabGroup.TabPanel 
             index={4} 
+            as="div"
             activeClassName="opacity-100 duration-500 translate-x-0"
             inactiveClassName="absolute opacity-0 -translate-x-2"
             >
                 
-                <div className=" flex flex-wrap max75:flex-col w-full">
+                <div aria-labelledby='4' className=" flex flex-wrap max75:flex-col w-full">
 
                     <MenuList drinkName={Burgers.title} drinkList={Burgers.collection} />
                     
@@ -441,8 +452,18 @@ function Type() {
 
                 </div>
 
-            </TabGroup.TabPanel>    
+            </TabGroup.TabPanel>   
+
         </TabGroup>
+
+        )
+
+        :
+
+        <h1>Loading...</h1>
+
+        }
+        
     </div>
 
   )
