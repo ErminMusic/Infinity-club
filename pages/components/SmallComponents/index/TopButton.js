@@ -7,7 +7,7 @@ function TopButton() {
   const [ show, setShow ] = useState(false)
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    window.addEventListener("scroll", {passive: true}, () => {
       if(window.scrollY > 100) {
         setShow(true)
       } else {

@@ -91,24 +91,9 @@ a {
   background-size: cover;
 }
 
-.imageTransparent {
-  position: absolute;
-  height: 23%;
-  right: 0 ;
-  left: 0;
-  width: 100%;
-  z-index: 5;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 @media (max-width:900px) {
   .image {
     height: 22%;
-  }
-  .imageTransparent { 
-    height: 18%;
   }
   .background {
     height: 86%;
@@ -119,9 +104,6 @@ a {
   .image {
     height: 16%;
   }
-  .imageTransparent { 
-    height: 9%;
-  }
   .background {
     height: 93%;
   }
@@ -130,9 +112,6 @@ a {
 @media (max-width:450px) {
   .image {
     height: 13%;
-  }
-  .imageTransparent { 
-    height: 6%;
   }
   .background {
     height: 95%;

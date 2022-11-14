@@ -7,10 +7,10 @@ function Logo() {
     className=" relative w-1/5 -ml-2 max110:w-1/4 
     max90:w-1/2 max90:mt-4 max45:mt-0 min90:-mt-3 mb-2 ">
 
-        <Image 
-        src={LogoImg} 
-        alt="" 
-        ayout="responsive" />
+      <Image 
+      src={LogoImg} 
+      alt="" 
+      ayout="responsive" />
 
     </div>
   )

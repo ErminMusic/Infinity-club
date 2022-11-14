@@ -2,7 +2,6 @@ import { TabGroup } from '@statikly/funk'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWineBottle, faWineGlass, faMartiniGlass, faGlassWater, faBowlFood } from '@fortawesome/free-solid-svg-icons'
 import MenuList from './MenuList'
-import { useState, useEffect } from "react";
 
 function Type() {
 
@@ -317,16 +316,10 @@ function Type() {
         ]
     }
 
-    const [ mount, setMount ] = useState(false)
-
-    useEffect(() => {
-        setMount(true)
-    }, [])
-
   return (
     <div className='flex flex-col' >
-        {mount ? (
-            <TabGroup  numTabs={4} direction={TabGroup.direction.HORIZONTAL}>
+
+        <TabGroup  numTabs={4} direction={TabGroup.direction.HORIZONTAL}>
 
             <div  
             className=" flex w-full my-6 overflow-x-auto"
@@ -455,14 +448,6 @@ function Type() {
             </TabGroup.TabPanel>   
 
         </TabGroup>
-
-        )
-
-        :
-
-        <h1>Loading...</h1>
-
-        }
         
     </div>
 

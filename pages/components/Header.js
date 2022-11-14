@@ -24,7 +24,7 @@ function Header() {
     // }
 
     useEffect(() => {
-        window.addEventListener('scroll', changeColor)
+        window.addEventListener('scroll', changeColor, {passive: true})
     },[])
 
   return (

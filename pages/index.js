@@ -27,11 +27,15 @@ export default function Home() {
 
       <Head>
         <title>Infinity Club</title>
+
+        <meta 
+          name="description"
+          content="Welcome to the best clubbing expirience in Graz, the Infinity Club "
+        />
+
       </Head>
 
-      <Image src={BgImage} alt="" className="image absolute right-0 left-0 z-5 "  />
-
-      <Image src={BgTransparent} alt="" className="imageTransparent absolute right-0 left-0 z-5 opacity-100 "  />
+      <Image src={BgImage} loading="lazy" alt="" className="image absolute right-0 left-0 z-5 "  />
 
       <div className="background absolute "  />
      
