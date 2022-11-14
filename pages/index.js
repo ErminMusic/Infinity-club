@@ -8,6 +8,9 @@ import Welcome from "./components/Welcome"
 import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Image from "next/image";
+import BgImage from "../public/images/BgImage.webp"
+import BgTransparent from "../public/images/BgTransparent.webp"
 import Head from "next/head"
 
 export default function Home() {
@@ -26,7 +29,9 @@ export default function Home() {
         <title>Infinity Club</title>
       </Head>
 
-      <div alt="" className="image absolute right-0 left-0  z-5 "  />
+      <Image src={BgImage} alt="" className="image absolute right-0 left-0 z-5 "  />
+
+      <Image src={BgTransparent} alt="" className="imageTransparent absolute right-0 left-0 z-5 opacity-100 "  />
 
       <div className="background absolute "  />
      

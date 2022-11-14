@@ -32,7 +32,7 @@ function NavbarItem() {
             max110:text-xxs max30:text-smm max50:text-xs'
      
                key={index} style={{color: "#afafaf"}} >
-                <Link smooth={true} to={item.link}>
+                <Link smooth={true} to={item.link} href={item.link}>
                     <div className=" relative uppercase max70:mr-8">
 
                         <div 
