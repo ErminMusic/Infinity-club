@@ -35,7 +35,13 @@ export default function Home() {
 
       </Head>
 
-      <Image src={BgImage} loading="lazy" alt="" className="image absolute right-0 left-0 z-5 "  />
+      <Image 
+      src={BgImage} 
+      loading="lazy" 
+      alt="" 
+      className="image bg-center bg-no-repeat bg-cover 
+      w-full h-1/3 max90:h-25% max75:h-15%
+      absolute right-0 left-0 z-5 "  />
 
       <div className="background absolute "  />
      

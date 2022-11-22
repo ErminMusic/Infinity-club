@@ -25,6 +25,7 @@ function Logo() {
 
         <Image 
         src={Bar} 
+        priority
         alt="" 
         layout="responsive" />
 
