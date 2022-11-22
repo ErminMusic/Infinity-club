@@ -40,8 +40,8 @@ export default function Home() {
       loading="lazy" 
       alt="" 
       className=" bg-center bg-no-repeat bg-cover 
-      w-full h-[32%] max90:h-25% max75:h-15%
-      absolute right-0 left-0 -top-3 z-5 "  />
+      w-full h-auto max90:h-25% max75:h-15%
+      absolute right-0 left-0 -top-3 min150:-top-8 z-5 "  />
 
       <div className="background absolute "  />
      
