@@ -39,9 +39,9 @@ export default function Home() {
       src={BgImage} 
       loading="lazy" 
       alt="" 
-      className="image bg-center bg-no-repeat bg-cover 
-      w-full h-1/3 max90:h-25% max75:h-15%
-      absolute right-0 left-0 z-5 "  />
+      className=" bg-center bg-no-repeat bg-cover 
+      w-full h-[32%] max90:h-25% max75:h-15%
+      absolute right-0 left-0 -top-3 z-5 "  />
 
       <div className="background absolute "  />
      
