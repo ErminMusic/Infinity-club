@@ -37,7 +37,6 @@ export default function Home() {
 
       <Image 
       src={BgImagePhone}  
-      priority
       loading="lazy"
       alt=""
       className=" bg-center bg-no-repeat bg-cover 
