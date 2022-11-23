@@ -17,6 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     AOS.init();
+    document.addEventListener('touchstart', {passive: true});
   }, [])
 
   return (

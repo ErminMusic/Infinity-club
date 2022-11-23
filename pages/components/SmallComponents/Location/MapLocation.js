@@ -19,7 +19,7 @@ function MapLocation() {
     flex justify-end p-2 
     w-2/3 h-full max75:w-full'>
     
-      <iframe passive={true}  className=" max110:w-full aspect-auto max75:aspect-square w-full h-full" title="Location" 
+      <iframe passive={true} className=" max110:w-full aspect-auto max75:aspect-square w-full h-full" title="Location" 
       src={link} />
     
     </div>
