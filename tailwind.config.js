@@ -71,6 +71,12 @@ module.exports = {
 
       'max20': {'max': '200px'},
 
+      'max370px': { 'max': '370px' },
+
+
+
+
+
       'min150': {'min': '1501px'},
 
       'min145': {'min': '1451px'},
@@ -128,6 +134,8 @@ module.exports = {
       'min22': {'min': '226px'},
 
       'min20': {'min': '201px'},
+
+      'min370px': { 'min': '371px' },
 
     },
 

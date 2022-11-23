@@ -1,5 +1,4 @@
 function WorkTime() {
-
     const Workday = [
         {
             day: "Monday",
@@ -43,7 +42,7 @@ function WorkTime() {
     
         {Workday.map((item, index) => (
 
-            <div style={{background: item.bg ? "transparent" : "#EAD185", color: item.bg ? "white" : "black"}}
+            <div defer style={{background: item.bg ? "transparent" : "#EAD185", color: item.bg ? "white" : "black"}}
             className="flex justify-between text-sm p-2 max95:px-1 w-full max30:text-xs"
             key={index}>
 

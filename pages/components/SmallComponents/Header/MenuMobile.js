@@ -17,7 +17,6 @@ function MenuMobile( { setShowMenu, showMenu } ) {
         className=" text-cus-yellow cursor-pointer" />
       </div>
 
-
       <NavbarItem />
 
     </div>

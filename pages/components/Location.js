@@ -4,7 +4,6 @@ import MapLocation from "./SmallComponents/Location/MapLocation";
 import Logo from "./SmallComponents/Location/Logo";
 
 function Location() {
-
   return (
     <div data-aos="fade-up" data-aos-duration="1000" id="LOCATION"
     className="font-raleway flex flex-col
@@ -24,7 +23,6 @@ function Location() {
             className="flex flex-col content-center 
             mr-10 max110:mr-4 p-2 w-1/3
             max110:w-1/2 max75:w-full">
-
 
                 <div data-aos="fade-up" data-aos-duration="1000" className=" m-auto text-cus-yellow my-4 w-full flex content-center items-center ">
                     <p className="text-center w-full text-lg ">WORKING HOURS</p>

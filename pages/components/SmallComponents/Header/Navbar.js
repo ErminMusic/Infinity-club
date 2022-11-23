@@ -22,7 +22,6 @@ function NavbarItem() {
     ]
 
   return (
-
     <>
         {NavbarItems.map((item, index) => (
             <div 

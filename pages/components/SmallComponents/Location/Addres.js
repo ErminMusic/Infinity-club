@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
-
 function Addres() {
   return (
     <div data-aos="fade-up" data-aos-duration="1000" 
@@ -16,7 +15,6 @@ function Addres() {
           <FontAwesomeIcon icon={faLocationDot} />
         </div>
          
-
         <span className=" ml-1 max30:text-smm max45:text-sm text-white">
           Alte Poststraße 460-462 8055 Graz
         </span>

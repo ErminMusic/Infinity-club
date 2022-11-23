@@ -3,10 +3,7 @@ import { useState, useEffect } from "react";
 function MenuList( { drinkName, drinkList } ) {
 
   const [ name, setName ] = useState([])
-
   const [ list, setList ] = useState([])
-
-  
 
   useEffect(() => {
     setName(drinkName)
@@ -24,7 +21,7 @@ function MenuList( { drinkName, drinkList } ) {
   
       {list.map((item, index) => (
 
-        <div className=" 
+        <div defer className=" 
         flex justify-between py-1
         max27:text-xsm text-white"
       

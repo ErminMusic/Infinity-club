@@ -12,25 +12,21 @@ function Logo() {
       whitespace-nowrap max75:whitespace-normal">
 
       <div className="relative min75:hidden max50:w-full" >
-
         <Image 
         src={BarM} 
         priority
         alt="" 
         layout="responsive" />
-
       </div>
 
       <div className="relative max75:hidden ">
-
         <Image 
         src={Bar} 
         priority
         alt="" 
         layout="responsive" />
-
       </div>
-
+      
     </div>
   )
 }

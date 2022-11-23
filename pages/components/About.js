@@ -5,7 +5,6 @@ import AboutDivTwo from './SmallComponents/About/AboutDivTwo';
 
 function About() {
   return (
-
     <div data-aos="fade-up" data-aos-duration="1000" id='ABOUT'
     className=" text-cus-yellow w-full h-100% font-raleway -z-50">
 
@@ -21,7 +20,6 @@ function About() {
             className=" mr-1 text-xl hover:animate-bounce cursor-pointer" />
           </div>
 
-
           <div className=' w-[22px] h-[22px]'>
             <FontAwesomeIcon icon={faInstagram} 
             className=" text-xl hover:animate-bounce cursor-pointer" />
@@ -34,11 +32,9 @@ function About() {
       <div className=" flex justify-between max90:flex-col">
   
         <AboutDivOne />
-
         <AboutDivTwo />
 
       </div>
-
     </div>
   )
 }

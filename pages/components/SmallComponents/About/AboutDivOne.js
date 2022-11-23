@@ -27,7 +27,6 @@ function AboutDivOne() {
 
       </div>
 
-
       <p className="text-justify pt-5
       pl-10 pr-14 max90:px-0 max110:pr-4">
 

@@ -13,7 +13,6 @@ function Footer() {
       data-aos="fade-up" data-aos-duration="1000">
 
         <Logo />
-
         <BottomInfo />
           
       </div>

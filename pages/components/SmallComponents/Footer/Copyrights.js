@@ -24,8 +24,6 @@ function Copyrights() {
 
       </div>
 
-
-
       <div className="max90:hidden">
 
         <p>Designed and developed by Blueduck</p>

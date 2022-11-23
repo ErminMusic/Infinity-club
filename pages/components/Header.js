@@ -10,7 +10,6 @@ function Header() {
 
     const [ bgColor, setBgColor ] = useState(false)
 
-
     const changeColor = () => {
         if(window.scrollY >= 90) {
             setBgColor(true)
@@ -18,10 +17,6 @@ function Header() {
             setBgColor(false)
         }
     }
-
-    // if (typeof window !== "undefined") {
-    //     addEventListener('scroll', changeColor)
-    // }
 
     useEffect(() => {
         window.addEventListener('scroll', changeColor, {passive: true})
@@ -40,9 +35,8 @@ function Header() {
             
         </div>
 
-        <Menu setShowMenu={setShowMenu} showMenu={showMenu} />
-
-        <MenuMobile setShowMenu={setShowMenu} showMenu={showMenu} />
+        <Menu defer setShowMenu={setShowMenu} showMenu={showMenu} />
+        <MenuMobile defer setShowMenu={setShowMenu} showMenu={showMenu} />
 
     </div>
   )

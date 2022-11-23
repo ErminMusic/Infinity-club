@@ -46,10 +46,8 @@ function BottomInfo() {
 
             </div>
 
-
             <div className=" h-1 w-1 mb-3 bg-cus-yellow 
             rounded-full min90:hidden text-cus-yellow" />
-
 
             <div 
             className="min90:hidden flex flex-col  max90:flex-row 
@@ -59,7 +57,6 @@ function BottomInfo() {
                 <span className="m:underline max90:text-cus-yellow ml-1">Blueduck</span></p>
                 
             </div>
-
 
         </div>
 

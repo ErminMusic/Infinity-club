@@ -78,10 +78,8 @@ a {
   background: linear-gradient(180deg, rgba(40, 40, 40, 0) 0%, rgba(40, 40, 40, 0.481031) 2.15%, #202020 7.51%);
 }
 
+
 @media (max-width:900px) {
-  .image {
-    height: 18%;
-  }
   .background {
     height: 85%;
   }
@@ -93,20 +91,9 @@ a {
   }
 }
 
-@media (max-width:700px) {
-  .image {
-    height: 16%;
-  }
-}
-
-
-
-@media (max-width:300px) {
-  .image {
-    height: 13%;
-  }
+@media (max-width:371px) {
   .background {
-    height: 94%;
+    height: 93%;
   }
 }
 
@@ -129,6 +116,8 @@ a {
   -user-drag: none;
 
   -ms-overflow-style: none;
+
+  font-display: swap;
 }
 
 ::-webkit-scrollbar {

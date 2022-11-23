@@ -42,7 +42,6 @@ function Type() {
             name: "Food"
         },
     ]
-
     const Heißgetränke = {
         title: "Heißgetränke",
         collection: [
@@ -76,7 +75,6 @@ function Type() {
             },
         ]
     }
-
     const BioLimonaden = {
         title: "BioLimonaden",
         collection: [
@@ -106,7 +104,6 @@ function Type() {
             }
         ]
     }
-
     const Soda = {
         title: "Soda, Mineral",
         collection: [
@@ -124,7 +121,6 @@ function Type() {
             },
         ]
     }
-
     const RedWine = {
         title: "Red Wine",
         collection: [
@@ -150,7 +146,6 @@ function Type() {
             },
         ]
     }
-
     const WhiteWine = {
         title: "White Wine",
         collection: [
@@ -176,7 +171,6 @@ function Type() {
             },
         ]
     }
-
     const DryMartini = {
         title: "Dry Martini",
         collection: [
@@ -214,7 +208,6 @@ function Type() {
             },
         ]
     }
-
     const MoscowMule = {
         title: "Moscow Mule",
         collection: [
@@ -240,7 +233,6 @@ function Type() {
             },
         ]
     }
-
     const NonAlchocolic = {
         title: "Non-Alchocolic",
         collection: [
@@ -266,7 +258,6 @@ function Type() {
             },
         ]
     }
-
     const Burgers = {
         title: "Burgers",
         collection: [
@@ -284,7 +275,6 @@ function Type() {
             },
         ]
     }
-
     const Pizza = {
         title: "Pizza",
         collection: [
@@ -302,7 +292,6 @@ function Type() {
             },
         ]
     }
-
     const Extra = {
         title: "Extra",
         collection:[ {
@@ -320,17 +309,15 @@ function Type() {
     <div className='flex flex-col' >
 
         <TabGroup  numTabs={4} direction={TabGroup.direction.HORIZONTAL}>
-
             <div  
             className=" flex w-full my-6 overflow-x-auto"
             data-aos="fade-up" data-aos-duration="1500">
             
                 {images.map((item, index) => (
                     
-                    <div className="transition-all w-full"  key={index}
+                    <div defer className="transition-all w-full"  key={index}
                     >
                         <TabGroup.TabList >
-
                             <TabGroup.Tab
                             key={index}
                             index={index}
@@ -351,7 +338,6 @@ function Type() {
                                 {item.name}
                                 
                             </TabGroup.Tab>
-
                         </TabGroup.TabList>
                     
                     </div>
@@ -359,7 +345,6 @@ function Type() {
                 ))}
 
             </div>
-            
             <TabGroup.TabPanel 
             index={0} 
             as="div"
@@ -369,16 +354,15 @@ function Type() {
 
                 <div aria-labelledby='0' className=" flex flex-wrap max75:flex-col w-full">
 
-                    <MenuList drinkName={Heißgetränke.title} drinkList={Heißgetränke.collection} />
+                    <MenuList defer drinkName={Heißgetränke.title} drinkList={Heißgetränke.collection} />
                     
-                    <MenuList drinkName={BioLimonaden.title} drinkList={BioLimonaden.collection} />
+                    <MenuList defer drinkName={BioLimonaden.title} drinkList={BioLimonaden.collection} />
 
-                    <MenuList drinkName={Soda.title} drinkList={Soda.collection} />
+                    <MenuList defer drinkName={Soda.title} drinkList={Soda.collection} />
 
                 </div>
 
             </TabGroup.TabPanel>
-
             <TabGroup.TabPanel 
             index={1} 
             as="div"
@@ -388,14 +372,13 @@ function Type() {
                 
                 <div aria-labelledby='1' className=" flex flex-wrap max75:flex-col w-full">
 
-                    <MenuList drinkName={RedWine.title} drinkList={RedWine.collection} />
+                    <MenuList defer drinkName={RedWine.title} drinkList={RedWine.collection} />
                     
-                    <MenuList drinkName={WhiteWine.title} drinkList={WhiteWine.collection} />
+                    <MenuList defer drinkName={WhiteWine.title} drinkList={WhiteWine.collection} />
 
                 </div>
 
             </TabGroup.TabPanel>
-
             <TabGroup.TabPanel 
             index={2} 
             as="div"
@@ -405,14 +388,13 @@ function Type() {
                 
                 <div aria-labelledby='2' className=" flex flex-wrap max75:flex-col w-full">
 
-                    <MenuList drinkName={DryMartini.title} drinkList={DryMartini.collection} />
+                    <MenuList defer drinkName={DryMartini.title} drinkList={DryMartini.collection} />
                     
-                    <MenuList drinkName={MoscowMule.title} drinkList={MoscowMule.collection} />
+                    <MenuList defer drinkName={MoscowMule.title} drinkList={MoscowMule.collection} />
 
                 </div>
 
             </TabGroup.TabPanel>
-
             <TabGroup.TabPanel 
             index={3} 
             as="div"
@@ -422,12 +404,11 @@ function Type() {
                 
                 <div aria-labelledby='3' className=" flex flex-wrap max75:flex-col w-full">
 
-                    <MenuList drinkName={NonAlchocolic.title} drinkList={NonAlchocolic.collection} />
+                    <MenuList defer drinkName={NonAlchocolic.title} drinkList={NonAlchocolic.collection} />
 
                 </div>
 
             </TabGroup.TabPanel>
-
             <TabGroup.TabPanel 
             index={4} 
             as="div"
@@ -437,20 +418,18 @@ function Type() {
                 
                 <div aria-labelledby='4' className=" flex flex-wrap max75:flex-col w-full">
 
-                    <MenuList drinkName={Burgers.title} drinkList={Burgers.collection} />
+                    <MenuList defer drinkName={Burgers.title} drinkList={Burgers.collection} />
                     
-                    <MenuList drinkName={Pizza.title} drinkList={Pizza.collection} />
+                    <MenuList defer drinkName={Pizza.title} drinkList={Pizza.collection} />
 
-                    <MenuList drinkName={Extra.title} drinkList={Extra.collection} />
+                    <MenuList defer drinkName={Extra.title} drinkList={Extra.collection} />
 
                 </div>
 
             </TabGroup.TabPanel>   
-
         </TabGroup>
         
     </div>
-
   )
 }
 

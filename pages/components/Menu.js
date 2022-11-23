@@ -7,7 +7,7 @@ function Menu() {
   const [ mount, setMount ] = useState(false)
 
   useEffect(() => {
-      setMount(true)
+    setMount(true)
   }, [])
 
   return (
@@ -18,22 +18,15 @@ function Menu() {
       {mount ? (
         <div>
           <Logo />
-
           <div >
-    
             <Type />
-    
           </div>
         </div>
-            
       ) 
-      
       : 
       
         <div></div> 
       }
-
-
     </div>
   )
 }
