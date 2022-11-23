@@ -16,6 +16,7 @@ function Logo() {
         src={BarM} 
         priority
         alt="" 
+        
         layout="responsive" />
       </div>
 

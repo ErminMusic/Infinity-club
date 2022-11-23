@@ -29,6 +29,7 @@ export default function Home() {
 
       <Image 
       src={BgImage}  
+      priority
       alt="" 
       className=" bg-center bg-no-repeat bg-cover 
       w-full h-auto max90:h-25% max75:h-15%
@@ -36,6 +37,8 @@ export default function Home() {
 
       <Image 
       src={BgImagePhone}  
+      priority
+      loading="lazy"
       alt=""
       className=" bg-center bg-no-repeat bg-cover 
       w-full h-auto max90:h-25% max75:h-15% 
