@@ -31,6 +31,7 @@ export default function Home() {
       <Image 
       src={BgImage}  
       alt="" 
+      priority
       className=" bg-center bg-no-repeat bg-cover 
       w-full h-auto max90:h-25% max75:h-15%
       absolute right-0 left-0 -top-3 min150:-top-8 z-5 max370px:hidden "  />
