@@ -10,7 +10,7 @@ export default function Document() {
         <Main />
         <NextScript />
         <script
-            async src={`https://www.googlemanager.com/gtag/js?id=${GA_TRACKING_ID}`} 
+          async src={`https://www.googlemanager.com/gtag/js?id=${GA_TRACKING_ID}`} 
         />
         <script
           dangerouslySetInnerHTML={{

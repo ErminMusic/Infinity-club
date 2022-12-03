@@ -5,14 +5,15 @@ import Location from "./components/Location"
 import Menu from "./components/Menu"
 import TopButton from "./components/SmallComponents/index/TopButton"
 import Welcome from "./components/Welcome"
-import { useEffect } from "react";
+import FooterCookies from "./components/SmallComponents/index/Cookies"
+import { useState, useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Image from "next/image";
 import BgImage from "../public/images/BgImage.webp"
 import BgImagePhone from "../public/images/BgImagePhone.webp"
 import PageHead from "./components/PageHead"
-
+    
 export default function Home() {
 
   useEffect(() => {
@@ -53,6 +54,7 @@ export default function Home() {
         <Location />
         <Footer />
         <TopButton />
+        <FooterCookies />
 
       </div>
 

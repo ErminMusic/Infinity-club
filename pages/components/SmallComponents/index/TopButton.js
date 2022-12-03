@@ -26,7 +26,7 @@ function TopButton() {
   return (
     <>
       {show && (
-        <div defer className=" w-[45px] h-[45px] topButton z-100 right-12 bottom-12 border-[3px] text-[32px]
+        <div defer className=" w-[45px] h-[45px] topButton z-100 right-8 bottom-12 border-[3px] text-[32px]
         border-cus-yellow text-cus-yellow rounded-full p-[3px] px-1.5 cursor-pointer"
         onClick={scrollToTop}>
           <FontAwesomeIcon icon={faAngleUp} style={{fontSize: 32}}/>

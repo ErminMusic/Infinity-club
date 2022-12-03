@@ -78,6 +78,18 @@ a {
   background: linear-gradient(180deg, rgba(40, 40, 40, 0) 0%, rgba(40, 40, 40, 0.481031) 2.15%, #202020 7.51%);
 }
 
+@media (max-width:1250px) {
+  .background {
+    height: 80%;
+  }
+}
+
+@media (max-width:1050px) {
+  .background {
+    height: 85%;
+  }
+}
+
 
 @media (max-width:900px) {
   .background {
