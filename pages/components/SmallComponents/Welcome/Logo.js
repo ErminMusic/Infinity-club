@@ -23,7 +23,7 @@ function Logo() {
       <div className="relative max75:hidden ">
         <Image 
         src={Bar} 
-        priority
+        loading="lazy"
         alt="" 
         layout="responsive" />
       </div>

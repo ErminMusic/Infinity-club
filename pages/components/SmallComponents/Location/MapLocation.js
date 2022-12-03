@@ -6,7 +6,7 @@ function MapLocation() {
 
   const getMap = async () => {
     setTimeout(() => {
-      setLink("https://maps.google.com/maps?q=west%20palm%20beach&t=&z=15&ie=UTF8&iwloc=&output=embed", {passive: true})
+      setLink("https://maps.google.com/maps?q=west%20palm%20beach&t=&z=15&ie=UTF8&iwloc=&output=embed", {passive: "true"})
     }, 3000)
   }
 
