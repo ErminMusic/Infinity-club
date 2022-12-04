@@ -17,6 +17,9 @@ export default function Document() {
           })(window,document,'script','dataLayer','GTM-5ZBS58T');`,
           }}
         />
+        <Script
+          async src={`https://www.googlemanager.com/gtag/js?id=${GA_TRACKING_ID}`} 
+        />
       </Head>
       <body>
       <noscript
@@ -28,9 +31,6 @@ export default function Document() {
     
         <Main />
         <NextScript />
-        <script
-          async src={`https://www.googlemanager.com/gtag/js?id=${GA_TRACKING_ID}`} 
-        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
